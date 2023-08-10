@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>package_private</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>f232f1641b51191062e50ed2cd4bcb64</copied_from>
+        <copied_from_name>Deprovision AD and OneDrive</copied_from_name>
+        <description/>
+        <internal_name>ad_and_onedrive_deprovisioning</internal_name>
+        <label_cache>[{"name":"cd7e56bf-6c76-49e0-9886-6bb551ffe6a8.status","label":"14➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"caadf51a-62ad-4ba0-b8b1-7ae5bba568f6"}},{"name":"cd7e56bf-6c76-49e0-9886-6bb551ffe6a8.__dont_treat_as_error__","label":"14➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"3b1e71d0-4438-4194-9b21-011b31b8754e"}},{"name":"cd7e56bf-6c76-49e0-9886-6bb551ffe6a8.__action_status__","label":"14➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDe546f20154ea0914d518b403ac908486","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"77b61c7a-0dda-4a80-a945-1d424469e7ee"}},{"name":"4ac750c2-a622-46cf-8ed1-17a78681ac14.__dont_treat_as_error__","label":"12➛13➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4ac750c2-a622-46cf-8ed1-17a78681ac14.__action_status__","label":"12➛13➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDc9c6123d1fef89506bc5e95cb7b93967","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4ac750c2-a622-46cf-8ed1-17a78681ac14.answer","label":"12➛13➛answer","reference_display":"answer","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"44fbf944-0383-42e5-8fad-7f344e33a40e"}},{"name":"60c98bac-b9ce-4e3e-a5ff-018511550dbe.context","label":"11➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"ad339f2c-8010-4a88-bf10-95621328ce5a.html","label":"10➛HTML","reference_display":"HTML","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"049d15bc-c0db-4c45-8c18-e73e04b52a2c"}},{"name":"ad339f2c-8010-4a88-bf10-95621328ce5a.__dont_treat_as_error__","label":"10➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"6bc24165-f19e-4c73-b55b-f1194997798f"}},{"name":"ad339f2c-8010-4a88-bf10-95621328ce5a.__action_status__","label":"10➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD22ccc28b345dc950e45cd48fddfafbe8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"8b32e227-4cf9-4a26-9c3d-524bbeef4ba6"}},{"name":"subflow.person_leaving.email","label":"Input➛Person Leaving➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"subflow.manager.email","label":"Input➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"subflow.manager.u_user_principal_name","label":"Input➛Manager➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.employees_manager.u_user_principal_name","label":"1➛employees_manager➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.Person_Leaving.u_user_principal_name","label":"1➛Person_Leaving➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.employees_manager","label":"1➛employees_manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.Person_Leaving","label":"1➛Person_Leaving","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"subflow.ritm_record","label":"Input➛RITM Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"29a4a491-c668-4c3c-9bdb-7e86f85f0f63","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.manager_upn","label":"Flow Variables➛Manager UPN","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7820d7fd-63dc-4325-9ccc-b2b6dfe7c0a7"}},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.employees_manager.email","label":"1➛employees_manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"flow_variable.person_leaving_upn","label":"Flow Variables➛Person Leaving UPN","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"704b99ea-af8a-4eb5-8684-6eab9b31fa57"}},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.Person_Leaving.email","label":"1➛Person_Leaving➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"subflow.person_leaving.u_user_principal_name","label":"Input➛Person Leaving➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"d5ae0ccd-466a-43e9-b931-eeb759ab983a.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f58e354c-6c8f-4c5a-a11f-0bd5f6726ed7"}},{"name":"d5ae0ccd-466a-43e9-b931-eeb759ab983a.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"e7007a9b-c7c7-4563-907d-93a38748dde6"}},{"name":"27ab9a61-1255-4613-9bc9-559e9119475f.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f58e354c-6c8f-4c5a-a11f-0bd5f6726ed7"}},{"name":"27ab9a61-1255-4613-9bc9-559e9119475f.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"e7007a9b-c7c7-4563-907d-93a38748dde6"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.__action_status__","label":"8➛9➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD84c1bf41a0ef8150ece6ec0db47375d4","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f08c2b2f-6a4a-4e89-8bbc-3a5516b1a794"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.__dont_treat_as_error__","label":"8➛9➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"bfe632e4-6b68-47f5-84ba-f3483a4d12bb"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.status_code","label":"8➛9➛Status Code","reference_display":"Status Code","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"fd45b803-029e-4350-a86b-1114e9405473"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_body","label":"8➛9➛Response Body","reference_display":"Response Body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1ad6280e-b7cc-46ca-bf5b-eeb424b62eef"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_headers","label":"8➛9➛Response Headers","reference_display":"Response Headers","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"0933c213-fa6c-4011-967e-aaec13796837"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.is_test_output","label":"8➛9➛Is Test?","reference_display":"Is Test?","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c339a5e8-a13a-4570-8fcb-9924fb71c310"}},{"name":"subflow.ritm_record.number","label":"Input➛RITM Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"number"},{"name":"91fde1b1-b1c7-4d89-9abe-f36e5ebff190.task","label":"11➛task","reference":"task","reference_display":"Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"91fde1b1-b1c7-4d89-9abe-f36e5ebff190.__action_status__","label":"11➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"91fde1b1-b1c7-4d89-9abe-f36e5ebff190.__dont_treat_as_error__","label":"11➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>AD and OneDrive Deprovisioning</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>69ba0e601b55191062e50ed2cd4bcb35</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AD and OneDrive Deprovisioning</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_hub_flow_69ba0e601b55191062e50ed2cd4bcb35</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_variable_value action="DELETE" query="document_key=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT INedba0e601b55191062e50ed2cd4bcb36"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>69ba0e601b55191062e50ed2cd4bcb35</id>
+        <name>AD and OneDrive Deprovisioning</name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:42</sys_created_on>
+        <sys_id>edba0e601b55191062e50ed2cd4bcb36</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=edba0e601b55191062e50ed2cd4bcb36"/>
+    <sys_hub_flow_input action="DELETE" query="model=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT INe5ba0e601b55191062e50ed2cd4bcb63,e5ba0e601b55191062e50ed2cd4bcb91,edba0e601b55191062e50ed2cd4bcb7a"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=29a4a491-c668-4c3c-9bdb-7e86f85f0f63</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ritm_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>RITM Record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</model>
+        <model_id>69ba0e601b55191062e50ed2cd4bcb35</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:42</sys_created_on>
+        <sys_id>e5ba0e601b55191062e50ed2cd4bcb63</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=f7d9af57-4429-4cf8-93b1-4f9da8624558</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>manager</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Manager</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</model>
+        <model_id>69ba0e601b55191062e50ed2cd4bcb35</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>e5ba0e601b55191062e50ed2cd4bcb91</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e72d53c0-6699-43d2-84c8-91de2e947220</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>person_leaving</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Person Leaving</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</model>
+        <model_id>69ba0e601b55191062e50ed2cd4bcb35</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>edba0e601b55191062e50ed2cd4bcb7a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_action_instance action="DELETE" query="flow=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN0aba4e601b55191062e50ed2cd4bcb3f,3dba4e601b55191062e50ed2cd4bcb26,75ba4e601b55191062e50ed2cd4bcb35,b5ba4e601b55191062e50ed2cd4bcb2e,f1ba4e601b55191062e50ed2cd4bcb11"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="AD Account Term/Disable">d546f2011bea091462e50ed2cd4bcb79</action_type>
+        <action_type_parent display_value="AD Account Term/Disable">f516f2cd1baa091462e50ed2cd4bcb1c</action_type_parent>
+        <comment>Terminate AD account</comment>
+        <compiled_snapshot>d546f2011bea091462e50ed2cd4bcb79</compiled_snapshot>
+        <display_text/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <order>14</order>
+        <parent_ui_id>6b2ea7f4-1543-4520-a316-e03195434e21</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>0aba4e601b55191062e50ed2cd4bcb3f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <ui_id>cd7e56bf-6c76-49e0-9886-6bb551ffe6a8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=0aba4e601b55191062e50ed2cd4bcb3f"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0aba4e601b55191062e50ed2cd4bcb3f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>82ba4e601b55191062e50ed2cd4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Is Test">4c86ba011bea091462e50ed2cd4bcb8b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>0aba4e601b55191062e50ed2cd4bcb3f</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>ceba4e601b55191062e50ed2cd4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <value>terminate</value>
+        <variable display_value="Action">36e9e9a51ba3495062e50ed2cd4bcb08</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=0aba4e601b55191062e50ed2cd4bcb3f"/>
+    <sys_element_mapping action="DELETE">
+        <field>action</field>
+        <id>0aba4e601b55191062e50ed2cd4bcb3f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>42ba4e601b55191062e50ed2cd4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>email</field>
+        <id>0aba4e601b55191062e50ed2cd4bcb3f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>4eba4e601b55191062e50ed2cd4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79</table>
+        <value>{{flow_variable.person_leaving_upn}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>is_test</field>
+        <id>0aba4e601b55191062e50ed2cd4bcb3f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>c6ba4e601b55191062e50ed2cd4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79</table>
+        <value>{{4ac750c2-a622-46cf-8ed1-17a78681ac14.answer}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>manager_email</field>
+        <id>0aba4e601b55191062e50ed2cd4bcb3f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>8aba4e601b55191062e50ed2cd4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79</table>
+        <value>{{flow_variable.manager_upn}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>ritm_number</field>
+        <id>0aba4e601b55191062e50ed2cd4bcb3f</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>06ba4e601b55191062e50ed2cd4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79</table>
+        <value>{{subflow.ritm_record.number}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=0aba4e601b55191062e50ed2cd4bcb3f"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=0aba4e601b55191062e50ed2cd4bcb3f"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Build HTML Card">92ccc28b1b5dc9508c5143f3cc4bcb94</action_type>
+        <action_type_parent display_value="Build HTML Card">72244e4b1b1dc9508c5143f3cc4bcb72</action_type_parent>
+        <comment>Build azure response work note</comment>
+        <compiled_snapshot>92ccc28b1b5dc9508c5143f3cc4bcb94</compiled_snapshot>
+        <display_text/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <order>10</order>
+        <parent_ui_id>1e5e64e4-81bb-46ed-add8-a049b67ff387</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>3dba4e601b55191062e50ed2cd4bcb26</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <ui_id>ad339f2c-8010-4a88-bf10-95621328ce5a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=3dba4e601b55191062e50ed2cd4bcb26"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3dba4e601b55191062e50ed2cd4bcb26</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>3dba4e601b55191062e50ed2cd4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <value/>
+        <variable display_value="Body">92ccc28b1b5dc9508c5143f3cc4bcbac</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3dba4e601b55191062e50ed2cd4bcb26</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>79ba4e601b55191062e50ed2cd4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"name$":"FD12ccc28b205dc9500b06ca565e61a798","$COCollectionField":[{"Label":{"$cv":{"$c":"java.lang.String","$v":""}},"URL":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798":{"$COCollectionField":[{"URLs_child0":{"Label":"String","Label.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Label\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"URL":"String","URL.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"URL\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"}}}</value>
+        <variable display_value="URLs">16ccc28b1b5dc9508c5143f3cc4bcba4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3dba4e601b55191062e50ed2cd4bcb26</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>fdba4e601b55191062e50ed2cd4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <value>Azure automation triggered: Delegate OneDrive Access</value>
+        <variable display_value="Title">9eccc28b1b5dc9508c5143f3cc4bcb9b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=3dba4e601b55191062e50ed2cd4bcb26"/>
+    <sys_element_mapping action="DELETE">
+        <field>body</field>
+        <id>3dba4e601b55191062e50ed2cd4bcb26</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>35ba4e601b55191062e50ed2cd4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Azure response:&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:c81fccfb-96bc-48ed-bd4b-f4d8690b4c36}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:c81fccfb-96bc-48ed-bd4b-f4d8690b4c36}}"&gt;&lt;span class="data-pill-content-container"&gt;8&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;9&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Response Headers&lt;button id="transform_function_facade_c81fccfb-96bc-48ed-bd4b-f4d8690b4c36" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:91426a77-6fe6-4c89-a56b-35a39f3c8f0a}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:91426a77-6fe6-4c89-a56b-35a39f3c8f0a}}"&gt;&lt;span class="data-pill-content-container"&gt;8&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;9&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Response Body&lt;button id="transform_function_facade_91426a77-6fe6-4c89-a56b-35a39f3c8f0a" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;HTTP status:&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:706e26fd-744d-47a7-a7a9-9793972448f7}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:706e26fd-744d-47a7-a7a9-9793972448f7}}"&gt;&lt;span class="data-pill-content-container"&gt;8&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;9&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Status Code&lt;button id="transform_function_facade_706e26fd-744d-47a7-a7a9-9793972448f7" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>title</field>
+        <id>3dba4e601b55191062e50ed2cd4bcb26</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>f5ba4e601b55191062e50ed2cd4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>urls</field>
+        <id>3dba4e601b55191062e50ed2cd4bcb26</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>71ba4e601b55191062e50ed2cd4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=3dba4e601b55191062e50ed2cd4bcb26"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=3dba4e601b55191062e50ed2cd4bcb26"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_type display_value="Is Environment Sub-Production?">b8c6123d1bef895062e50ed2cd4bcb3a</action_type>
+        <action_type_parent display_value="Is Environment Sub-Production?">c1565a391bef895062e50ed2cd4bcb69</action_type_parent>
+        <comment/>
+        <compiled_snapshot>b8c6123d1bef895062e50ed2cd4bcb3a</compiled_snapshot>
+        <display_text/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <order>12➛13</order>
+        <parent_ui_id>6b2ea7f4-1543-4520-a316-e03195434e21</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>75ba4e601b55191062e50ed2cd4bcb35</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <ui_id>4ac750c2-a622-46cf-8ed1-17a78681ac14</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=75ba4e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=75ba4e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=75ba4e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Add Worknote">4d7227a473210300e4fd234ffff6a712</action_type>
+        <action_type_parent display_value="Add Worknote">cdc8896487110300123eaf8e36cb0b24</action_type_parent>
+        <comment>Add response work note to RITM</comment>
+        <compiled_snapshot>4d7227a473210300e4fd234ffff6a712</compiled_snapshot>
+        <display_text/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <order>11</order>
+        <parent_ui_id>1e5e64e4-81bb-46ed-add8-a049b67ff387</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>b5ba4e601b55191062e50ed2cd4bcb2e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <ui_id>91fde1b1-b1c7-4d89-9abe-f36e5ebff190</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=b5ba4e601b55191062e50ed2cd4bcb2e"/>
+    <sys_element_mapping action="DELETE" query="id=b5ba4e601b55191062e50ed2cd4bcb2e"/>
+    <sys_element_mapping action="DELETE">
+        <field>ah_task</field>
+        <id>b5ba4e601b55191062e50ed2cd4bcb2e</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>79ba4e601b55191062e50ed2cd4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4d7227a473210300e4fd234ffff6a712</table>
+        <value>{{subflow.ritm_record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>ah_work_note</field>
+        <id>b5ba4e601b55191062e50ed2cd4bcb2e</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>3dba4e601b55191062e50ed2cd4bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4d7227a473210300e4fd234ffff6a712</table>
+        <value>[code]{{ad339f2c-8010-4a88-bf10-95621328ce5a.html}}[/code]</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=b5ba4e601b55191062e50ed2cd4bcb2e"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=b5ba4e601b55191062e50ed2cd4bcb2e"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
+        <action_type_parent display_value="Delegate OneDrive Access">86eeeb491baf81508c5143f3cc4bcb17</action_type_parent>
+        <comment/>
+        <compiled_snapshot>b7b17f411bef81508c5143f3cc4bcbff</compiled_snapshot>
+        <display_text/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <order>8➛9</order>
+        <parent_ui_id>1e5e64e4-81bb-46ed-add8-a049b67ff387</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>f1ba4e601b55191062e50ed2cd4bcb11</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <ui_id>0ab9b91d-4973-41ad-bb2a-5561961ef70c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=f1ba4e601b55191062e50ed2cd4bcb11"/>
+    <sys_element_mapping action="DELETE" query="id=f1ba4e601b55191062e50ed2cd4bcb11"/>
+    <sys_element_mapping action="DELETE">
+        <field>manager_upn</field>
+        <id>f1ba4e601b55191062e50ed2cd4bcb11</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>39ba4e601b55191062e50ed2cd4bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b7b17f411bef81508c5143f3cc4bcbff</table>
+        <value>{{flow_variable.manager_upn}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>person_leaving_upn</field>
+        <id>f1ba4e601b55191062e50ed2cd4bcb11</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>75ba4e601b55191062e50ed2cd4bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b7b17f411bef81508c5143f3cc4bcbff</table>
+        <value>{{flow_variable.person_leaving_upn}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>ritm_number</field>
+        <id>f1ba4e601b55191062e50ed2cd4bcb11</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>b1ba4e601b55191062e50ed2cd4bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b7b17f411bef81508c5143f3cc4bcbff</table>
+        <value>{{subflow.ritm_record.number}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=f1ba4e601b55191062e50ed2cd4bcb11"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=f1ba4e601b55191062e50ed2cd4bcb11"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN35ba0e601b55191062e50ed2cd4bcbc8,39ba0e601b55191062e50ed2cd4bcbb5,3dba0e601b55191062e50ed2cd4bcbcb,6dba0e601b55191062e50ed2cd4bcbae,75ba0e601b55191062e50ed2cd4bcbce,75ba0e601b55191062e50ed2cd4bcbdd,edba0e601b55191062e50ed2cd4bcbaa,f5ba0e601b55191062e50ed2cd4bcbc5,f9ba0e601b55191062e50ed2cd4bcbb2"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">3a05bd2c1b51191062e50ed2cd4bcbe3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>35ba0e601b55191062e50ed2cd4bcbc8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>67b7dd05-ded6-46c2-9f0f-154b94f505e6</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=35ba0e601b55191062e50ed2cd4bcbc8"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>35ba0e601b55191062e50ed2cd4bcbc8</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>35ba0e601b55191062e50ed2cd4bcbcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <value>manager and person leaving UPN not blank</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=35ba0e601b55191062e50ed2cd4bcbc8"/>
+    <sys_element_mapping action="DELETE" query="id=35ba0e601b55191062e50ed2cd4bcbc8"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>35ba0e601b55191062e50ed2cd4bcbc8</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>b1ba0e601b55191062e50ed2cd4bcbcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{flow_variable.manager_upn}}!=^{{flow_variable.person_leaving_upn}}!= </value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>35ba0e601b55191062e50ed2cd4bcbc8</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>fdba0e601b55191062e50ed2cd4bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=35ba0e601b55191062e50ed2cd4bcbc8"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=35ba0e601b55191062e50ed2cd4bcbc8"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">b7e3f9681b51191062e50ed2cd4bcb06</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>39ba0e601b55191062e50ed2cd4bcbb5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>bd908d9b-8942-44e4-a0d3-a15deb48596a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=39ba0e601b55191062e50ed2cd4bcbb5"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>39ba0e601b55191062e50ed2cd4bcbb5</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>fdba0e601b55191062e50ed2cd4bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <value>person leaving UPN is blank</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=39ba0e601b55191062e50ed2cd4bcbb5"/>
+    <sys_element_mapping action="DELETE" query="id=39ba0e601b55191062e50ed2cd4bcbb5"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>39ba0e601b55191062e50ed2cd4bcbb5</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>7dba0e601b55191062e50ed2cd4bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{flow_variable.person_leaving_upn}}=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>39ba0e601b55191062e50ed2cd4bcbb5</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>b9ba0e601b55191062e50ed2cd4bcbc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=39ba0e601b55191062e50ed2cd4bcbb5"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=39ba0e601b55191062e50ed2cd4bcbb5"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">b4434e2c1bd1191062e50ed2cd4bcbf2</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Do the following in Parallel">5d31e5dedfe50300b61ecae83df26326</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>67b7dd05-ded6-46c2-9f0f-154b94f505e6</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>3dba0e601b55191062e50ed2cd4bcbcb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>5e2f164e-ae0b-4eb1-a832-0a9ed77d246d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=3dba0e601b55191062e50ed2cd4bcbcb"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=3dba0e601b55191062e50ed2cd4bcbcb"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=3dba0e601b55191062e50ed2cd4bcbcb"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=3dba0e601b55191062e50ed2cd4bcbcb"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">77e3b9681b51191062e50ed2cd4bcbf3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>6dba0e601b55191062e50ed2cd4bcbae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>68483701-8c7b-449a-8a5a-17fcd451b80c</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=6dba0e601b55191062e50ed2cd4bcbae"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>6dba0e601b55191062e50ed2cd4bcbae</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>61ba0e601b55191062e50ed2cd4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <value>manager UPN is blank</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=6dba0e601b55191062e50ed2cd4bcbae"/>
+    <sys_element_mapping action="DELETE" query="id=6dba0e601b55191062e50ed2cd4bcbae"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>6dba0e601b55191062e50ed2cd4bcbae</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>edba0e601b55191062e50ed2cd4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{flow_variable.manager_upn}}=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>6dba0e601b55191062e50ed2cd4bcbae</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>2dba0e601b55191062e50ed2cd4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=6dba0e601b55191062e50ed2cd4bcbae"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=6dba0e601b55191062e50ed2cd4bcbae"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">f0434e2c1bd1191062e50ed2cd4bcbf5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Parallel Branch">a1168de173311300b61e66476bf6a7d0</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>5e2f164e-ae0b-4eb1-a832-0a9ed77d246d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>75ba0e601b55191062e50ed2cd4bcbce</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>1e5e64e4-81bb-46ed-add8-a049b67ff387</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=75ba0e601b55191062e50ed2cd4bcbce"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=75ba0e601b55191062e50ed2cd4bcbce"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=75ba0e601b55191062e50ed2cd4bcbce"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=75ba0e601b55191062e50ed2cd4bcbce"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">6e970ee41b15191062e50ed2cd4bcb96</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Parallel Branch">a1168de173311300b61e66476bf6a7d0</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>5e2f164e-ae0b-4eb1-a832-0a9ed77d246d</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>75ba0e601b55191062e50ed2cd4bcbdd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>6b2ea7f4-1543-4520-a316-e03195434e21</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=75ba0e601b55191062e50ed2cd4bcbdd"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=75ba0e601b55191062e50ed2cd4bcbdd"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=75ba0e601b55191062e50ed2cd4bcbdd"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=75ba0e601b55191062e50ed2cd4bcbdd"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">959371681b51191062e50ed2cd4bcb13</block>
+        <comment>Default Manager and Person Leaving UPN</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>manager_upn,person_leaving_upn</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>edba0e601b55191062e50ed2cd4bcbaa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>e056dd95-8926-404e-a885-2f61488b94a0</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=edba0e601b55191062e50ed2cd4bcbaa"/>
+    <sys_element_mapping action="DELETE" query="id=edba0e601b55191062e50ed2cd4bcbaa"/>
+    <sys_element_mapping action="DELETE">
+        <field>manager_upn</field>
+        <id>edba0e601b55191062e50ed2cd4bcbaa</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>25ba0e601b55191062e50ed2cd4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35</table>
+        <value>{{subflow.manager.u_user_principal_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>person_leaving_upn</field>
+        <id>edba0e601b55191062e50ed2cd4bcbaa</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>61ba0e601b55191062e50ed2cd4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35</table>
+        <value>{{subflow.person_leaving.u_user_principal_name}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=edba0e601b55191062e50ed2cd4bcbaa"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=edba0e601b55191062e50ed2cd4bcbaa"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">7fe3f9681b51191062e50ed2cd4bcb09</block>
+        <comment>Set person leaving UPN to person leaving email</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>person_leaving_upn</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>bd908d9b-8942-44e4-a0d3-a15deb48596a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>f5ba0e601b55191062e50ed2cd4bcbc5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>d9d30c83-937f-40f0-89cd-81c2a468b6bc</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=f5ba0e601b55191062e50ed2cd4bcbc5"/>
+    <sys_element_mapping action="DELETE" query="id=f5ba0e601b55191062e50ed2cd4bcbc5"/>
+    <sys_element_mapping action="DELETE">
+        <field>person_leaving_upn</field>
+        <id>f5ba0e601b55191062e50ed2cd4bcbc5</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>7dba0e601b55191062e50ed2cd4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35</table>
+        <value>{{subflow.person_leaving.email}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=f5ba0e601b55191062e50ed2cd4bcbc5"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=f5ba0e601b55191062e50ed2cd4bcbc5"/>
+    <sys_hub_flow_logic action="DELETE">
+        <block display_value="">f3e3b9681b51191062e50ed2cd4bcbf7</block>
+        <comment>Set manager UPN to manager email</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>manager_upn</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>68483701-8c7b-449a-8a5a-17fcd451b80c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>f9ba0e601b55191062e50ed2cd4bcbb2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <ui_id>2d780bd9-3f02-4708-a7a4-105b79999729</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=f9ba0e601b55191062e50ed2cd4bcbb2"/>
+    <sys_element_mapping action="DELETE" query="id=f9ba0e601b55191062e50ed2cd4bcbb2"/>
+    <sys_element_mapping action="DELETE">
+        <field>manager_upn</field>
+        <id>f9ba0e601b55191062e50ed2cd4bcbb2</id>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>71ba0e601b55191062e50ed2cd4bcbb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35</table>
+        <value>{{subflow.manager.email}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=f9ba0e601b55191062e50ed2cd4bcbb2"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=f9ba0e601b55191062e50ed2cd4bcbb2"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN42ba4e601b55191062e50ed2cd4bcb4d,4aba4e601b55191062e50ed2cd4bcb4c,ceba4e601b55191062e50ed2cd4bcb4c"/>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>69ba0e601b55191062e50ed2cd4bcb35</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_body}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>42ba4e601b55191062e50ed2cd4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>91426a77-6fe6-4c89-a56b-35a39f3c8f0a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>69ba0e601b55191062e50ed2cd4bcb35</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_headers}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>4aba4e601b55191062e50ed2cd4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c81fccfb-96bc-48ed-bd4b-f4d8690b4c36</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>69ba0e601b55191062e50ed2cd4bcb35</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{0ab9b91d-4973-41ad-bb2a-5561961ef70c.status_code}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:44</sys_created_on>
+        <sys_id>ceba4e601b55191062e50ed2cd4bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:44</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>706e26fd-744d-47a7-a7a9-9793972448f7</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="DELETE" query="model=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN61ba0e601b55191062e50ed2cd4bcb50,adba0e601b55191062e50ed2cd4bcb49"/>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=704b99ea-af8a-4eb5-8684-6eab9b31fa57</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>person_leaving_upn</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Person Leaving UPN</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</model>
+        <model_id>69ba0e601b55191062e50ed2cd4bcb35</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:42</sys_created_on>
+        <sys_id>61ba0e601b55191062e50ed2cd4bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Person Leaving UPN</sys_name>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_61ba0e601b55191062e50ed2cd4bcb50</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7820d7fd-63dc-4325-9ccc-b2b6dfe7c0a7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>manager_upn</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Manager UPN</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="AD and OneDrive Deprovisioning">69ba0e601b55191062e50ed2cd4bcb35</model>
+        <model_id>69ba0e601b55191062e50ed2cd4bcb35</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:42</sys_created_on>
+        <sys_id>adba0e601b55191062e50ed2cd4bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manager UPN</sys_name>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_adba0e601b55191062e50ed2cd4bcb49</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN2dba0e601b55191062e50ed2cd4bcb79,65ba0e601b55191062e50ed2cd4bcb9a,6dba0e601b55191062e50ed2cd4bcb83"/>
+    <sys_documentation action="DELETE">
+        <element>ritm_record</element>
+        <help/>
+        <hint/>
+        <label>RITM Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>2dba0e601b55191062e50ed2cd4bcb79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>manager</element>
+        <help/>
+        <hint/>
+        <label>Manager</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>65ba0e601b55191062e50ed2cd4bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>person_leaving</element>
+        <help/>
+        <hint/>
+        <label>Person Leaving</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:43</sys_created_on>
+        <sys_id>6dba0e601b55191062e50ed2cd4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=69ba0e601b55191062e50ed2cd4bcb35"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</application>
+        <file_path/>
+        <instance_id>37412023db6dd890ad8dd7c8f49619a0</instance_id>
+        <instance_name>apigroupdev</instance_name>
+        <name>sys_hub_flow_69ba0e601b55191062e50ed2cd4bcb35</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from&gt;f232f1641b51191062e50ed2cd4bcb64&lt;/copied_from&gt;&lt;copied_from_name&gt;Deprovision AD and OneDrive&lt;/copied_from_name&gt;&lt;description/&gt;&lt;internal_name&gt;ad_and_onedrive_deprovisioning&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"cd7e56bf-6c76-49e0-9886-6bb551ffe6a8.status","label":"14➛Status","reference_display":"Status","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"caadf51a-62ad-4ba0-b8b1-7ae5bba568f6"}},{"name":"cd7e56bf-6c76-49e0-9886-6bb551ffe6a8.__dont_treat_as_error__","label":"14➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"3b1e71d0-4438-4194-9b21-011b31b8754e"}},{"name":"cd7e56bf-6c76-49e0-9886-6bb551ffe6a8.__action_status__","label":"14➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDe546f20154ea0914d518b403ac908486","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"77b61c7a-0dda-4a80-a945-1d424469e7ee"}},{"name":"4ac750c2-a622-46cf-8ed1-17a78681ac14.__dont_treat_as_error__","label":"12➛13➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4ac750c2-a622-46cf-8ed1-17a78681ac14.__action_status__","label":"12➛13➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDc9c6123d1fef89506bc5e95cb7b93967","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4ac750c2-a622-46cf-8ed1-17a78681ac14.answer","label":"12➛13➛answer","reference_display":"answer","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"44fbf944-0383-42e5-8fad-7f344e33a40e"}},{"name":"60c98bac-b9ce-4e3e-a5ff-018511550dbe.context","label":"11➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"ad339f2c-8010-4a88-bf10-95621328ce5a.html","label":"10➛HTML","reference_display":"HTML","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"049d15bc-c0db-4c45-8c18-e73e04b52a2c"}},{"name":"ad339f2c-8010-4a88-bf10-95621328ce5a.__dont_treat_as_error__","label":"10➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"6bc24165-f19e-4c73-b55b-f1194997798f"}},{"name":"ad339f2c-8010-4a88-bf10-95621328ce5a.__action_status__","label":"10➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD22ccc28b345dc950e45cd48fddfafbe8","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"8b32e227-4cf9-4a26-9c3d-524bbeef4ba6"}},{"name":"subflow.person_leaving.email","label":"Input➛Person Leaving➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"subflow.manager.email","label":"Input➛Manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"subflow.manager.u_user_principal_name","label":"Input➛Manager➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.employees_manager.u_user_principal_name","label":"1➛employees_manager➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.Person_Leaving.u_user_principal_name","label":"1➛Person_Leaving➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.employees_manager","label":"1➛employees_manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.Person_Leaving","label":"1➛Person_Leaving","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"subflow.ritm_record","label":"Input➛RITM Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"29a4a491-c668-4c3c-9bdb-7e86f85f0f63","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.manager_upn","label":"Flow Variables➛Manager UPN","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7820d7fd-63dc-4325-9ccc-b2b6dfe7c0a7"}},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.employees_manager.email","label":"1➛employees_manager➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"flow_variable.person_leaving_upn","label":"Flow Variables➛Person Leaving UPN","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"704b99ea-af8a-4eb5-8684-6eab9b31fa57"}},{"name":"a3d8aa64-671b-461e-91d7-cf6985ea9829.Person_Leaving.email","label":"1➛Person_Leaving➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"subflow.person_leaving.u_user_principal_name","label":"Input➛Person Leaving➛User Principal Name","reference":"","reference_display":"User Principal Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_user_principal_name"},{"name":"d5ae0ccd-466a-43e9-b931-eeb759ab983a.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f58e354c-6c8f-4c5a-a11f-0bd5f6726ed7"}},{"name":"d5ae0ccd-466a-43e9-b931-eeb759ab983a.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"e7007a9b-c7c7-4563-907d-93a38748dde6"}},{"name":"27ab9a61-1255-4613-9bc9-559e9119475f.__action_status__","label":"7➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f58e354c-6c8f-4c5a-a11f-0bd5f6726ed7"}},{"name":"27ab9a61-1255-4613-9bc9-559e9119475f.__dont_treat_as_error__","label":"7➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"e7007a9b-c7c7-4563-907d-93a38748dde6"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.__action_status__","label":"8➛9➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD84c1bf41a0ef8150ece6ec0db47375d4","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f08c2b2f-6a4a-4e89-8bbc-3a5516b1a794"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.__dont_treat_as_error__","label":"8➛9➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"bfe632e4-6b68-47f5-84ba-f3483a4d12bb"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.status_code","label":"8➛9➛Status Code","reference_display":"Status Code","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"fd45b803-029e-4350-a86b-1114e9405473"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_body","label":"8➛9➛Response Body","reference_display":"Response Body","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1ad6280e-b7cc-46ca-bf5b-eeb424b62eef"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_headers","label":"8➛9➛Response Headers","reference_display":"Response Headers","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"0933c213-fa6c-4011-967e-aaec13796837"}},{"name":"0ab9b91d-4973-41ad-bb2a-5561961ef70c.is_test_output","label":"8➛9➛Is Test?","reference_display":"Is Test?","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c339a5e8-a13a-4570-8fcb-9924fb71c310"}},{"name":"subflow.ritm_record.number","label":"Input➛RITM Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"number"},{"name":"91fde1b1-b1c7-4d89-9abe-f36e5ebff190.task","label":"11➛task","reference":"task","reference_display":"Task","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"91fde1b1-b1c7-4d89-9abe-f36e5ebff190.__action_status__","label":"11➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"91fde1b1-b1c7-4d89-9abe-f36e5ebff190.__dont_treat_as_error__","label":"11➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;name&gt;AD and OneDrive Deprovisioning&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:42&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;AD and OneDrive Deprovisioning&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Termination Process Automation" source="x_apig_termination"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_69ba0e601b55191062e50ed2cd4bcb35&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT INedba0e601b55191062e50ed2cd4bcb36"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/id&gt;&lt;name&gt;AD and OneDrive Deprovisioning&lt;/name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:42&lt;/sys_created_on&gt;&lt;sys_id&gt;edba0e601b55191062e50ed2cd4bcb36&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:42&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=edba0e601b55191062e50ed2cd4bcb36"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT INe5ba0e601b55191062e50ed2cd4bcb63,e5ba0e601b55191062e50ed2cd4bcb91,edba0e601b55191062e50ed2cd4bcb7a"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=29a4a491-c668-4c3c-9bdb-7e86f85f0f63&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sc_req_item&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;ritm_record&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;RITM Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model&gt;&lt;model_id&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:42&lt;/sys_created_on&gt;&lt;sys_id&gt;e5ba0e601b55191062e50ed2cd4bcb63&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=f7d9af57-4429-4cf8-93b1-4f9da8624558&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sys_user&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;manager&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Manager&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model&gt;&lt;model_id&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user"&gt;sys_user&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;e5ba0e601b55191062e50ed2cd4bcb91&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e72d53c0-6699-43d2-84c8-91de2e947220&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sys_user&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;person_leaving&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Person Leaving&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model&gt;&lt;model_id&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user"&gt;sys_user&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;edba0e601b55191062e50ed2cd4bcb7a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN0aba4e601b55191062e50ed2cd4bcb3f,3dba4e601b55191062e50ed2cd4bcb26,75ba4e601b55191062e50ed2cd4bcb35,b5ba4e601b55191062e50ed2cd4bcb2e,f1ba4e601b55191062e50ed2cd4bcb11"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="AD Account Term/Disable"&gt;d546f2011bea091462e50ed2cd4bcb79&lt;/action_type&gt;&lt;action_type_parent display_value="AD Account Term/Disable"&gt;f516f2cd1baa091462e50ed2cd4bcb1c&lt;/action_type_parent&gt;&lt;comment&gt;Terminate AD account&lt;/comment&gt;&lt;compiled_snapshot&gt;d546f2011bea091462e50ed2cd4bcb79&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;order&gt;14&lt;/order&gt;&lt;parent_ui_id&gt;6b2ea7f4-1543-4520-a316-e03195434e21&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;ui_id&gt;cd7e56bf-6c76-49e0-9886-6bb551ffe6a8&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=0aba4e601b55191062e50ed2cd4bcb3f"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;82ba4e601b55191062e50ed2cd4bcb42&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Is Test"&gt;4c86ba011bea091462e50ed2cd4bcb8b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/document_key&gt;&lt;order&gt;5&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;ceba4e601b55191062e50ed2cd4bcb41&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;value&gt;terminate&lt;/value&gt;&lt;variable display_value="Action"&gt;36e9e9a51ba3495062e50ed2cd4bcb08&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=0aba4e601b55191062e50ed2cd4bcb3f"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;action&lt;/field&gt;&lt;id&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;42ba4e601b55191062e50ed2cd4bcb41&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;email&lt;/field&gt;&lt;id&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;4eba4e601b55191062e50ed2cd4bcb41&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79&lt;/table&gt;&lt;value&gt;{{flow_variable.person_leaving_upn}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;is_test&lt;/field&gt;&lt;id&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;c6ba4e601b55191062e50ed2cd4bcb41&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79&lt;/table&gt;&lt;value&gt;{{4ac750c2-a622-46cf-8ed1-17a78681ac14.answer}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;manager_email&lt;/field&gt;&lt;id&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;8aba4e601b55191062e50ed2cd4bcb41&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79&lt;/table&gt;&lt;value&gt;{{flow_variable.manager_upn}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ritm_number&lt;/field&gt;&lt;id&gt;0aba4e601b55191062e50ed2cd4bcb3f&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;06ba4e601b55191062e50ed2cd4bcb41&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_d546f2011bea091462e50ed2cd4bcb79&lt;/table&gt;&lt;value&gt;{{subflow.ritm_record.number}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=0aba4e601b55191062e50ed2cd4bcb3f"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=0aba4e601b55191062e50ed2cd4bcb3f"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Build HTML Card"&gt;92ccc28b1b5dc9508c5143f3cc4bcb94&lt;/action_type&gt;&lt;action_type_parent display_value="Build HTML Card"&gt;72244e4b1b1dc9508c5143f3cc4bcb72&lt;/action_type_parent&gt;&lt;comment&gt;Build azure response work note&lt;/comment&gt;&lt;compiled_snapshot&gt;92ccc28b1b5dc9508c5143f3cc4bcb94&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;order&gt;10&lt;/order&gt;&lt;parent_ui_id&gt;1e5e64e4-81bb-46ed-add8-a049b67ff387&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;3dba4e601b55191062e50ed2cd4bcb26&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;ui_id&gt;ad339f2c-8010-4a88-bf10-95621328ce5a&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=3dba4e601b55191062e50ed2cd4bcb26"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;3dba4e601b55191062e50ed2cd4bcb26&lt;/document_key&gt;&lt;order&gt;3&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;3dba4e601b55191062e50ed2cd4bcb28&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;value/&gt;&lt;variable display_value="Body"&gt;92ccc28b1b5dc9508c5143f3cc4bcbac&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;3dba4e601b55191062e50ed2cd4bcb26&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;79ba4e601b55191062e50ed2cd4bcb28&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;value&gt;{"version":"1.0","complexObject":{"name$":"FD12ccc28b205dc9500b06ca565e61a798","$COCollectionField":[{"Label":{"$cv":{"$c":"java.lang.String","$v":""}},"URL":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798":{"$COCollectionField":[{"URLs_child0":{"Label":"String","Label.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Label\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"URL":"String","URL.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"URL\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD12ccc28b205dc9500b06ca565e61a798.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"URLs\",\"mandatory\":\"false\",\"child_name\":\"URLs_child0\",\"uiUniqueId\":\"10f959b9-7acf-41b8-bf76-de780544216a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD12ccc28b205dc9500b06ca565e61a798\",\"child_label\":\"URLs_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"807b21ed-d3fe-4280-b43f-fdce460bcb45\"}"}}}&lt;/value&gt;&lt;variable display_value="URLs"&gt;16ccc28b1b5dc9508c5143f3cc4bcba4&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;3dba4e601b55191062e50ed2cd4bcb26&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;fdba4e601b55191062e50ed2cd4bcb28&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;value&gt;Azure automation triggered: Delegate OneDrive Access&lt;/value&gt;&lt;variable display_value="Title"&gt;9eccc28b1b5dc9508c5143f3cc4bcb9b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=3dba4e601b55191062e50ed2cd4bcb26"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;body&lt;/field&gt;&lt;id&gt;3dba4e601b55191062e50ed2cd4bcb26&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;35ba4e601b55191062e50ed2cd4bcb28&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94&lt;/table&gt;&lt;value&gt;&amp;lt;p data-tinymcerootblock=""&amp;gt;Azure response:&amp;lt;/p&amp;gt;
+&amp;lt;p data-tinymcerootblock=""&amp;gt;&amp;lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:c81fccfb-96bc-48ed-bd4b-f4d8690b4c36}}"&amp;gt;&amp;lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:c81fccfb-96bc-48ed-bd4b-f4d8690b4c36}}"&amp;gt;&amp;lt;span class="data-pill-content-container"&amp;gt;8&amp;lt;span class="data-pill-label-caret"&amp;gt;&amp;lt;span class="data-pill-label-arrow"&amp;gt;➛&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;9&amp;lt;span class="data-pill-label-caret"&amp;gt;&amp;lt;span class="data-pill-label-arrow"&amp;gt;➛&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;Response Headers&amp;lt;button id="transform_function_facade_c81fccfb-96bc-48ed-bd4b-f4d8690b4c36" class="transform_function_facade no_transform_applied"&amp;gt;&amp;lt;span class="inline-script-icon"&amp;gt;&amp;lt;span style="display: none;"&amp;gt;​&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p data-tinymcerootblock=""&amp;gt;&amp;lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:91426a77-6fe6-4c89-a56b-35a39f3c8f0a}}"&amp;gt;&amp;lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:91426a77-6fe6-4c89-a56b-35a39f3c8f0a}}"&amp;gt;&amp;lt;span class="data-pill-content-container"&amp;gt;8&amp;lt;span class="data-pill-label-caret"&amp;gt;&amp;lt;span class="data-pill-label-arrow"&amp;gt;➛&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;9&amp;lt;span class="data-pill-label-caret"&amp;gt;&amp;lt;span class="data-pill-label-arrow"&amp;gt;➛&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;Response Body&amp;lt;button id="transform_function_facade_91426a77-6fe6-4c89-a56b-35a39f3c8f0a" class="transform_function_facade no_transform_applied"&amp;gt;&amp;lt;span class="inline-script-icon"&amp;gt;&amp;lt;span style="display: none;"&amp;gt;​&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;p data-tinymcerootblock=""&amp;gt;HTTP status:&amp;lt;/p&amp;gt;
+&amp;lt;p data-tinymcerootblock=""&amp;gt;&amp;lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:706e26fd-744d-47a7-a7a9-9793972448f7}}"&amp;gt;&amp;lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:706e26fd-744d-47a7-a7a9-9793972448f7}}"&amp;gt;&amp;lt;span class="data-pill-content-container"&amp;gt;8&amp;lt;span class="data-pill-label-caret"&amp;gt;&amp;lt;span class="data-pill-label-arrow"&amp;gt;➛&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;9&amp;lt;span class="data-pill-label-caret"&amp;gt;&amp;lt;span class="data-pill-label-arrow"&amp;gt;➛&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;Status Code&amp;lt;button id="transform_function_facade_706e26fd-744d-47a7-a7a9-9793972448f7" class="transform_function_facade no_transform_applied"&amp;gt;&amp;lt;span class="inline-script-icon"&amp;gt;&amp;lt;span style="display: none;"&amp;gt;​&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;title&lt;/field&gt;&lt;id&gt;3dba4e601b55191062e50ed2cd4bcb26&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;f5ba4e601b55191062e50ed2cd4bcb28&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;urls&lt;/field&gt;&lt;id&gt;3dba4e601b55191062e50ed2cd4bcb26&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;71ba4e601b55191062e50ed2cd4bcb28&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_92ccc28b1b5dc9508c5143f3cc4bcb94&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=3dba4e601b55191062e50ed2cd4bcb26"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=3dba4e601b55191062e50ed2cd4bcb26"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Is Environment Sub-Production?"&gt;b8c6123d1bef895062e50ed2cd4bcb3a&lt;/action_type&gt;&lt;action_type_parent display_value="Is Environment Sub-Production?"&gt;c1565a391bef895062e50ed2cd4bcb69&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;b8c6123d1bef895062e50ed2cd4bcb3a&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;order&gt;12➛13&lt;/order&gt;&lt;parent_ui_id&gt;6b2ea7f4-1543-4520-a316-e03195434e21&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;75ba4e601b55191062e50ed2cd4bcb35&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;ui_id&gt;4ac750c2-a622-46cf-8ed1-17a78681ac14&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=75ba4e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=75ba4e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=75ba4e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Add Worknote"&gt;4d7227a473210300e4fd234ffff6a712&lt;/action_type&gt;&lt;action_type_parent display_value="Add Worknote"&gt;cdc8896487110300123eaf8e36cb0b24&lt;/action_type_parent&gt;&lt;comment&gt;Add response work note to RITM&lt;/comment&gt;&lt;compiled_snapshot&gt;4d7227a473210300e4fd234ffff6a712&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;order&gt;11&lt;/order&gt;&lt;parent_ui_id&gt;1e5e64e4-81bb-46ed-add8-a049b67ff387&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;b5ba4e601b55191062e50ed2cd4bcb2e&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;ui_id&gt;91fde1b1-b1c7-4d89-9abe-f36e5ebff190&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=b5ba4e601b55191062e50ed2cd4bcb2e"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=b5ba4e601b55191062e50ed2cd4bcb2e"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_task&lt;/field&gt;&lt;id&gt;b5ba4e601b55191062e50ed2cd4bcb2e&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;79ba4e601b55191062e50ed2cd4bcb2f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_4d7227a473210300e4fd234ffff6a712&lt;/table&gt;&lt;value&gt;{{subflow.ritm_record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ah_work_note&lt;/field&gt;&lt;id&gt;b5ba4e601b55191062e50ed2cd4bcb2e&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;3dba4e601b55191062e50ed2cd4bcb2f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_4d7227a473210300e4fd234ffff6a712&lt;/table&gt;&lt;value&gt;[code]{{ad339f2c-8010-4a88-bf10-95621328ce5a.html}}[/code]&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=b5ba4e601b55191062e50ed2cd4bcb2e"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=b5ba4e601b55191062e50ed2cd4bcb2e"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Delegate OneDrive Access"&gt;b7b17f411bef81508c5143f3cc4bcbff&lt;/action_type&gt;&lt;action_type_parent display_value="Delegate OneDrive Access"&gt;86eeeb491baf81508c5143f3cc4bcb17&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;b7b17f411bef81508c5143f3cc4bcbff&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;order&gt;8➛9&lt;/order&gt;&lt;parent_ui_id&gt;1e5e64e4-81bb-46ed-add8-a049b67ff387&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;f1ba4e601b55191062e50ed2cd4bcb11&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;ui_id&gt;0ab9b91d-4973-41ad-bb2a-5561961ef70c&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=f1ba4e601b55191062e50ed2cd4bcb11"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=f1ba4e601b55191062e50ed2cd4bcb11"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;manager_upn&lt;/field&gt;&lt;id&gt;f1ba4e601b55191062e50ed2cd4bcb11&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;39ba4e601b55191062e50ed2cd4bcb13&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_b7b17f411bef81508c5143f3cc4bcbff&lt;/table&gt;&lt;value&gt;{{flow_variable.manager_upn}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;person_leaving_upn&lt;/field&gt;&lt;id&gt;f1ba4e601b55191062e50ed2cd4bcb11&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;75ba4e601b55191062e50ed2cd4bcb13&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_b7b17f411bef81508c5143f3cc4bcbff&lt;/table&gt;&lt;value&gt;{{flow_variable.person_leaving_upn}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;ritm_number&lt;/field&gt;&lt;id&gt;f1ba4e601b55191062e50ed2cd4bcb11&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;b1ba4e601b55191062e50ed2cd4bcb13&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_b7b17f411bef81508c5143f3cc4bcbff&lt;/table&gt;&lt;value&gt;{{subflow.ritm_record.number}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=f1ba4e601b55191062e50ed2cd4bcb11"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=f1ba4e601b55191062e50ed2cd4bcb11"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN35ba0e601b55191062e50ed2cd4bcbc8,39ba0e601b55191062e50ed2cd4bcbb5,3dba0e601b55191062e50ed2cd4bcbcb,6dba0e601b55191062e50ed2cd4bcbae,75ba0e601b55191062e50ed2cd4bcbce,75ba0e601b55191062e50ed2cd4bcbdd,edba0e601b55191062e50ed2cd4bcbaa,f5ba0e601b55191062e50ed2cd4bcbc5,f9ba0e601b55191062e50ed2cd4bcbb2"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;3a05bd2c1b51191062e50ed2cd4bcbe3&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;6&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;35ba0e601b55191062e50ed2cd4bcbc8&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;67b7dd05-ded6-46c2-9f0f-154b94f505e6&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=35ba0e601b55191062e50ed2cd4bcbc8"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;35ba0e601b55191062e50ed2cd4bcbc8&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;35ba0e601b55191062e50ed2cd4bcbcb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;value&gt;manager and person leaving UPN not blank&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=35ba0e601b55191062e50ed2cd4bcbc8"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=35ba0e601b55191062e50ed2cd4bcbc8"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;35ba0e601b55191062e50ed2cd4bcbc8&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;b1ba0e601b55191062e50ed2cd4bcbcb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{flow_variable.manager_upn}}!=^{{flow_variable.person_leaving_upn}}!= &lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;35ba0e601b55191062e50ed2cd4bcbc8&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;fdba0e601b55191062e50ed2cd4bcbca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=35ba0e601b55191062e50ed2cd4bcbc8"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=35ba0e601b55191062e50ed2cd4bcbc8"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;b7e3f9681b51191062e50ed2cd4bcb06&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;39ba0e601b55191062e50ed2cd4bcbb5&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;bd908d9b-8942-44e4-a0d3-a15deb48596a&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=39ba0e601b55191062e50ed2cd4bcbb5"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;39ba0e601b55191062e50ed2cd4bcbb5&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;fdba0e601b55191062e50ed2cd4bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;value&gt;person leaving UPN is blank&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=39ba0e601b55191062e50ed2cd4bcbb5"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=39ba0e601b55191062e50ed2cd4bcbb5"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;39ba0e601b55191062e50ed2cd4bcbb5&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;7dba0e601b55191062e50ed2cd4bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{flow_variable.person_leaving_upn}}=&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;39ba0e601b55191062e50ed2cd4bcbb5&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;b9ba0e601b55191062e50ed2cd4bcbc4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=39ba0e601b55191062e50ed2cd4bcbb5"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=39ba0e601b55191062e50ed2cd4bcbb5"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;b4434e2c1bd1191062e50ed2cd4bcbf2&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Do the following in Parallel"&gt;5d31e5dedfe50300b61ecae83df26326&lt;/logic_definition&gt;&lt;order&gt;7&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;67b7dd05-ded6-46c2-9f0f-154b94f505e6&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;3dba0e601b55191062e50ed2cd4bcbcb&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;5e2f164e-ae0b-4eb1-a832-0a9ed77d246d&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=3dba0e601b55191062e50ed2cd4bcbcb"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=3dba0e601b55191062e50ed2cd4bcbcb"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=3dba0e601b55191062e50ed2cd4bcbcb"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=3dba0e601b55191062e50ed2cd4bcbcb"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;77e3b9681b51191062e50ed2cd4bcbf3&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;6dba0e601b55191062e50ed2cd4bcbae&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;68483701-8c7b-449a-8a5a-17fcd451b80c&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=6dba0e601b55191062e50ed2cd4bcbae"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;6dba0e601b55191062e50ed2cd4bcbae&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;61ba0e601b55191062e50ed2cd4bcbb2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;value&gt;manager UPN is blank&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=6dba0e601b55191062e50ed2cd4bcbae"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=6dba0e601b55191062e50ed2cd4bcbae"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;6dba0e601b55191062e50ed2cd4bcbae&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;edba0e601b55191062e50ed2cd4bcbb1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{flow_variable.manager_upn}}=&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;6dba0e601b55191062e50ed2cd4bcbae&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;2dba0e601b55191062e50ed2cd4bcbb1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6dba0e601b55191062e50ed2cd4bcbae"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=6dba0e601b55191062e50ed2cd4bcbae"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;f0434e2c1bd1191062e50ed2cd4bcbf5&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Parallel Branch"&gt;a1168de173311300b61e66476bf6a7d0&lt;/logic_definition&gt;&lt;order&gt;8&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;5e2f164e-ae0b-4eb1-a832-0a9ed77d246d&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;75ba0e601b55191062e50ed2cd4bcbce&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;1e5e64e4-81bb-46ed-add8-a049b67ff387&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=75ba0e601b55191062e50ed2cd4bcbce"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=75ba0e601b55191062e50ed2cd4bcbce"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=75ba0e601b55191062e50ed2cd4bcbce"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=75ba0e601b55191062e50ed2cd4bcbce"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;6e970ee41b15191062e50ed2cd4bcb96&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Parallel Branch"&gt;a1168de173311300b61e66476bf6a7d0&lt;/logic_definition&gt;&lt;order&gt;12&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;5e2f164e-ae0b-4eb1-a832-0a9ed77d246d&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;75ba0e601b55191062e50ed2cd4bcbdd&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;6b2ea7f4-1543-4520-a316-e03195434e21&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=75ba0e601b55191062e50ed2cd4bcbdd"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35^id=75ba0e601b55191062e50ed2cd4bcbdd"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=75ba0e601b55191062e50ed2cd4bcbdd"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=75ba0e601b55191062e50ed2cd4bcbdd"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;959371681b51191062e50ed2cd4bcb13&lt;/block&gt;&lt;comment&gt;Default Manager and Person Leaving UPN&lt;/comment&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned&gt;manager_upn,person_leaving_upn&lt;/flow_variables_assigned&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Set Flow Variables"&gt;4f787d1e0f9b0010ecf0cc52ff767ea0&lt;/logic_definition&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;edba0e601b55191062e50ed2cd4bcbaa&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;e056dd95-8926-404e-a885-2f61488b94a0&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=edba0e601b55191062e50ed2cd4bcbaa"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=edba0e601b55191062e50ed2cd4bcbaa"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;manager_upn&lt;/field&gt;&lt;id&gt;edba0e601b55191062e50ed2cd4bcbaa&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;25ba0e601b55191062e50ed2cd4bcbae&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35&lt;/table&gt;&lt;value&gt;{{subflow.manager.u_user_principal_name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;person_leaving_upn&lt;/field&gt;&lt;id&gt;edba0e601b55191062e50ed2cd4bcbaa&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;61ba0e601b55191062e50ed2cd4bcbae&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35&lt;/table&gt;&lt;value&gt;{{subflow.person_leaving.u_user_principal_name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=edba0e601b55191062e50ed2cd4bcbaa"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=edba0e601b55191062e50ed2cd4bcbaa"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;7fe3f9681b51191062e50ed2cd4bcb09&lt;/block&gt;&lt;comment&gt;Set person leaving UPN to person leaving email&lt;/comment&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned&gt;person_leaving_upn&lt;/flow_variables_assigned&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Set Flow Variables"&gt;4f787d1e0f9b0010ecf0cc52ff767ea0&lt;/logic_definition&gt;&lt;order&gt;5&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;bd908d9b-8942-44e4-a0d3-a15deb48596a&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;f5ba0e601b55191062e50ed2cd4bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;d9d30c83-937f-40f0-89cd-81c2a468b6bc&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=f5ba0e601b55191062e50ed2cd4bcbc5"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=f5ba0e601b55191062e50ed2cd4bcbc5"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;person_leaving_upn&lt;/field&gt;&lt;id&gt;f5ba0e601b55191062e50ed2cd4bcbc5&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;7dba0e601b55191062e50ed2cd4bcbc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35&lt;/table&gt;&lt;value&gt;{{subflow.person_leaving.email}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f5ba0e601b55191062e50ed2cd4bcbc5"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=f5ba0e601b55191062e50ed2cd4bcbc5"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;block display_value=""&gt;f3e3b9681b51191062e50ed2cd4bcbf7&lt;/block&gt;&lt;comment&gt;Set manager UPN to manager email&lt;/comment&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned&gt;manager_upn&lt;/flow_variables_assigned&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Set Flow Variables"&gt;4f787d1e0f9b0010ecf0cc52ff767ea0&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;68483701-8c7b-449a-8a5a-17fcd451b80c&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;f9ba0e601b55191062e50ed2cd4bcbb2&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;2d780bd9-3f02-4708-a7a4-105b79999729&lt;/ui_id&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=f9ba0e601b55191062e50ed2cd4bcbb2"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=f9ba0e601b55191062e50ed2cd4bcbb2"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;manager_upn&lt;/field&gt;&lt;id&gt;f9ba0e601b55191062e50ed2cd4bcbb2&lt;/id&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;71ba0e601b55191062e50ed2cd4bcbb5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35&lt;/table&gt;&lt;value&gt;{{subflow.manager.email}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f9ba0e601b55191062e50ed2cd4bcbb2"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=f9ba0e601b55191062e50ed2cd4bcbb2"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN42ba4e601b55191062e50ed2cd4bcb4d,4aba4e601b55191062e50ed2cd4bcb4c,ceba4e601b55191062e50ed2cd4bcb4c"/&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_body}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;42ba4e601b55191062e50ed2cd4bcb4d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;91426a77-6fe6-4c89-a56b-35a39f3c8f0a&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{0ab9b91d-4973-41ad-bb2a-5561961ef70c.response_headers}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;4aba4e601b55191062e50ed2cd4bcb4c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;c81fccfb-96bc-48ed-bd4b-f4d8690b4c36&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{0ab9b91d-4973-41ad-bb2a-5561961ef70c.status_code}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:44&lt;/sys_created_on&gt;&lt;sys_id&gt;ceba4e601b55191062e50ed2cd4bcb4c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:44&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;706e26fd-744d-47a7-a7a9-9793972448f7&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN61ba0e601b55191062e50ed2cd4bcb50,adba0e601b55191062e50ed2cd4bcb49"/&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=704b99ea-af8a-4eb5-8684-6eab9b31fa57&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;person_leaving_upn&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Person Leaving UPN&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model&gt;&lt;model_id&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;0&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:42&lt;/sys_created_on&gt;&lt;sys_id&gt;61ba0e601b55191062e50ed2cd4bcb50&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Person Leaving UPN&lt;/sys_name&gt;&lt;sys_package display_value="Termination Process Automation" source="x_apig_termination"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_variable_61ba0e601b55191062e50ed2cd4bcb50&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:42&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7820d7fd-63dc-4325-9ccc-b2b6dfe7c0a7&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;manager_upn&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Manager UPN&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="AD and OneDrive Deprovisioning"&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model&gt;&lt;model_id&gt;69ba0e601b55191062e50ed2cd4bcb35&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;0&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:42&lt;/sys_created_on&gt;&lt;sys_id&gt;adba0e601b55191062e50ed2cd4bcb49&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Manager UPN&lt;/sys_name&gt;&lt;sys_package display_value="Termination Process Automation" source="x_apig_termination"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_variable_adba0e601b55191062e50ed2cd4bcb49&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:42&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35^sys_idNOT IN2dba0e601b55191062e50ed2cd4bcb79,65ba0e601b55191062e50ed2cd4bcb9a,6dba0e601b55191062e50ed2cd4bcb83"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;ritm_record&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;RITM Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;2dba0e601b55191062e50ed2cd4bcb79&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Termination Process Automation" source="x_apig_termination"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;manager&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Manager&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;65ba0e601b55191062e50ed2cd4bcb9a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Termination Process Automation" source="x_apig_termination"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;person_leaving&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Person Leaving&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Terry.Lillo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-10 18:35:43&lt;/sys_created_on&gt;&lt;sys_id&gt;6dba0e601b55191062e50ed2cd4bcb83&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Termination Process Automation" source="x_apig_termination"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Termination Process Automation"&gt;096401ab1b9bf41062e50ed2cd4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;Terry.Lillo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-10 18:35:43&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=69ba0e601b55191062e50ed2cd4bcb35"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-714270481</payload_hash>
+        <record_name>AD and OneDrive Deprovisioning</record_name>
+        <reverted_from/>
+        <source>8925a3a91b9401508c5143f3cc4bcbe2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:35:45</sys_created_on>
+        <sys_id>1aba8e601b55191062e50ed2cd4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182890a8a7e0000001</sys_recorded_at>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:35:45</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>9eba8e60cf55191049220aea7764bc02</update_guid>
+        <update_guid_history>9eba8e60cf55191049220aea7764bc02:-714270481,2dba0e60c3551910fd1c7f254a57a147:-131005908</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:37:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>97f57df1873644a889c85cfd104f7840</sys_id>
+        <sys_metadata>69ba0e601b55191062e50ed2cd4bcb35</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AD and OneDrive Deprovisioning</sys_name>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_scope_delete display_value="">418020babd074a1a9e9d2598fcf14061</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_69ba0e601b55191062e50ed2cd4bcb35</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_69ba0e601b55191062e50ed2cd4bcb35">1aba8e601b55191062e50ed2cd4bcb03</sys_update_version>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:37:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

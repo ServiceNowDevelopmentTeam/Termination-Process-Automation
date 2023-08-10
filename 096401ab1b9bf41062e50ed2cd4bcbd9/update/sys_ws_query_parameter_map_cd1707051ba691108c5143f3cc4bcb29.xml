@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter_map">
+    <sys_ws_query_parameter_map action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ws_query_parameter_map</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-10-13 15:34:58</sys_created_on>
+        <sys_id>cd1707051ba691108c5143f3cc4bcb29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>beb607c11ba691108c5143f3cc4bcbcb</sys_name>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_map_cd1707051ba691108c5143f3cc4bcb29</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-10-14 19:55:54</sys_updated_on>
+        <web_service_operation display_value="Respond">7f36cb411ba691108c5143f3cc4bcbac</web_service_operation>
+        <web_service_query_parameter display_value="SystemID">beb607c11ba691108c5143f3cc4bcbcb</web_service_query_parameter>
+    </sys_ws_query_parameter_map>
+</record_update>

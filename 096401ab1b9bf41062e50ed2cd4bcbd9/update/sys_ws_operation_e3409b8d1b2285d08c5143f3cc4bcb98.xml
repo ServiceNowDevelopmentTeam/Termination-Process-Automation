@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Terminate</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var message = 'Termination Flow Not Run';
+	// implement resource here
+	var incoming = request.body.data;
+	var flowData = {
+		status : incoming['status'],
+		ritm : incoming['ritm'],
+		is_test : incoming['is_test'],
+		password_reset : incoming["PasswordReset"],
+		account_disabled : incoming["OnPremAccountDisabled"],
+		manager_cleared : incoming["ManagerCleared"],
+		account_backed_up : incoming["ActBackedUp"],
+		groups_removed_from : incoming["GroupsRemovedFrom"],
+		membership_not_removed : incoming["MembershipNotRemoved"],
+		auto_reply_set : incoming["AutoReplySet"],
+		mailbox_converted_to_shared : incoming["MailboxConvertedtoShared"],
+		permissions_applied_to_mailbox : incoming["PermissionsAppliedtoMailbox"]
+	};
+	var notRunReasons = [];
+	if (gs.nil(flowData.status)) notRunReasons.push('Blank Status');
+	if (gs.nil(flowData.ritm)) notRunReasons.push('Blank RITM');
+	if (flowData.status != "Success" && flowData.status != "success") notRunReasons.push('Status Not Success');
+	
+	if(notRunReasons.length == 0)
+	{
+		try {
+			message = 'Termination Data Accepted';
+			var inputs = {};
+			inputs['flowdata'] = flowData; // Object 
+
+			var result = sn_fd.FlowAPI.getRunner().subflow('x_apig_termination.azure__termination_return_data').inForeground().withInputs(inputs).run();
+			var outputs = result.getOutputs();	
+		} catch (e) {
+			//If fatal error then create incident
+			/*
+			var incidentGr = new GlideRecord('incident');
+			incidentGr.initialize();
+			incidentGr.short_description = 'Azure to APi Connect API Failure(Exception)';
+			incidentGr.description = e;
+			incidentGr.assigned_to = '';
+			incidentGr.assignment_group = '48b385421be35090e7004229bc4bcb14';
+			incidentGr.category = 'Fault/Failure';
+			incidentGr.subcategory = 'Hardware';
+			incidentGr.u_service = 'APi Connect (ServiceNow)';
+			incidentGr.insert();*/
+		}
+	}
+	else{
+		message = 'Termination Flow Not Run. Reason';
+		message += notRunReasons.length > 1 ? 's: ' : ': ';
+		message += notRunReasons.join(',');
+	}
+	//Sending Response
+	var body = {};
+	body.status = "OK";
+	body.msg = message;
+	response.setBody(body);
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_apig_termination/termination/terminate</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/terminate</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-03-28 20:04:04</sys_created_on>
+        <sys_id>e3409b8d1b2285d08c5143f3cc4bcb98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Terminate</sys_name>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_ws_operation_e3409b8d1b2285d08c5143f3cc4bcb98</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-09-29 16:48:28</sys_updated_on>
+        <web_service_definition display_value="Termination">6c0bba1c1bfff0108c5143f3cc4bcbdd</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

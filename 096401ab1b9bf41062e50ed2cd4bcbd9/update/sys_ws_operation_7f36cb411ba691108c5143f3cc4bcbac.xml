@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Respond</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var error = '';
+	var errorList = [];
+
+	var payload = request.body.data;
+	var reason = payload.Reason;
+	var systemID = payload.SystemID;
+	var targetSystem = payload.TargetSystem;
+	var reasonResult = payload.Result;
+	reasonResult = reasonResult.trim();
+	if(gs.nil(reason))
+		errorList.push('Reason');
+	if(gs.nil(systemID))
+		errorList.push('SystemID');
+	if(gs.nil(targetSystem))
+		errorList.push('TargetSystem');
+	if(gs.nil(reasonResult))
+		errorList.push('Result');
+	var ritmGr = new GlideRecord('sc_req_item');
+
+	if(!ritmGr.get(systemID)) {
+		error += gs.nil(error) ? '/r/n/r/n' : '';
+		error += 'RITM record not found for SystemID ' + systemID;
+	}
+	var inputs = {};
+	inputs['reason'] = reason; // String 
+	inputs['systemid'] = systemID; // String 
+	inputs['target_system'] = targetSystem; // Choice 
+	inputs['result'] = reasonResult; // Choice 
+	try{
+	sn_fd.FlowAPI.getRunner().subflow('x_apig_termination.erp_deprovision_response').inBackground().withInputs(inputs).run();
+	}
+	catch(e){
+		gs.error(e);
+	}
+	if(errorList.length == 0 && gs.nil(error)){
+		response.setStatus(200);
+		response.setContentType("application/json");
+		response.setBody({"Status":"Success","Reason":"Accepted"});
+	}
+	else{
+		error += !gs.nil(error) ? '/r/n/r/n' : '';
+		if(errorList.length != 0){
+			error += 'Expected values were blank:';
+			for(var i = 0; i < errorList.length; i++){
+				error += '/r/n' + errorList[i];
+			}
+		}
+		response.setStatus(400);
+		response.setContentType("application/json");
+		response.setBody({"Status":"Failed","Reason":error});
+	}
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_apig_termination/erp_deprovision_response/respond</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/respond</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-10-13 15:31:32</sys_created_on>
+        <sys_id>7f36cb411ba691108c5143f3cc4bcbac</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Respond</sys_name>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_ws_operation_7f36cb411ba691108c5143f3cc4bcbac</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-11-22 15:29:11</sys_updated_on>
+        <web_service_definition display_value="ERP Deprovision Response">ce16c7411ba691108c5143f3cc4bcb00</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
