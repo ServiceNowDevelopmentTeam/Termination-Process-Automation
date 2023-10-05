@@ -38,7 +38,7 @@
         <label>URL</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Azure - OneDrive Delegation Return Data">1bb360a81b9ca11462e50ed2cd4bcb2c</model>
+        <model display_value="">1bb360a81b9ca11462e50ed2cd4bcb2c</model>
         <model_id>1bb360a81b9ca11462e50ed2cd4bcb2c</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
         <name>var__m_sys_hub_flow_variable_1bb360a81b9ca11462e50ed2cd4bcb2c</name>

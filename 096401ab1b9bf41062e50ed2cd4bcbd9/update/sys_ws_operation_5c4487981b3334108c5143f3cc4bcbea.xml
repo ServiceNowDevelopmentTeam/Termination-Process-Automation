@@ -29,23 +29,13 @@
 			message = 'OneDrive Data Accepted';
 			var inputs = {};
 			inputs['flowdata'] = flowData; // Object 
-			var contextId = sn_fd.FlowAPI.startSubflow('x_apig_termination.onedrive_delegation_return_data', inputs);
 
-			//Set value of onedrive_flow_sysid to this context sys_id
+			var result = sn_fd.FlowAPI.getRunner().subflow('x_apig_termination.onedrive_delegation_return_data').inBackground().withInputs(inputs).run();
+			var contextId = result.getContextId();
 			var ritmGr = new GlideRecord('sc_req_item');
-			ritmGr.get(flowData.ritm);
-			var ritmId = ritmGr.sys_id.toString();
-			
-			var mtomGr = new GlideRecord('sc_item_option_mtom');
-			mtomGr.addEncodedQuery('sc_item_option.item_option_new=59a3b5a81bea21908c5143f3cc4bcba2^request_item=' + ritmId);
-			mtomGr.query();
-			if(mtomGr.next()){
-			var option = mtomGr.sc_item_option.sys_id.toString();
-			
-			var optionGr = new GlideRecord('sc_item_option');
-			optionGr.get(option);
-			optionGr.setValue('value',contextId);
-			optionGr.update();
+			if(ritmGr.get(flowData.ritm)){
+				ritmGr.variables.onedrive_flow_sysid = contextId.toString();
+				ritmGr.update();
 			}
 		} catch (e) {
 			//If fatal error then create incident
@@ -85,14 +75,14 @@
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2021-11-09 18:23:18</sys_created_on>
         <sys_id>5c4487981b3334108c5143f3cc4bcbea</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>OneDrive</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_update_name>sys_ws_operation_5c4487981b3334108c5143f3cc4bcbea</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2023-04-28 19:34:21</sys_updated_on>
+        <sys_updated_on>2023-10-02 19:37:53</sys_updated_on>
         <web_service_definition display_value="Termination">6c0bba1c1bfff0108c5143f3cc4bcbdd</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

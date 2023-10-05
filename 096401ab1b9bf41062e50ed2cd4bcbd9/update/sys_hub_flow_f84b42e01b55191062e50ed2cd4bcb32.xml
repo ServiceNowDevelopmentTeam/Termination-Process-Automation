@@ -29,15 +29,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f84b42e01b55191062e50ed2cd4bcb32</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>AD and OneDrive Deprovisioning</sys_name>
         <sys_overrides/>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_update_name>sys_hub_flow_f84b42e01b55191062e50ed2cd4bcb32</sys_update_name>
-        <sys_updated_by>John.Schwab</sys_updated_by>
-        <sys_updated_on>2023-04-27 13:49:39</sys_updated_on>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-05-05 14:16:14</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=f84b42e01b55191062e50ed2cd4bcb32"/>
@@ -323,10 +323,10 @@
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-08-10 20:05:26</sys_created_on>
         <sys_id>0c4f92681b19191062e50ed2cd4bcbed</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-07-10 05:03:40</sys_updated_on>
+        <sys_updated_on>2023-10-04 19:20:06</sys_updated_on>
         <ui_id>4c2a7aca-1eaf-456c-80e1-669782b00c8b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0c4f92681b19191062e50ed2cd4bcbed"/>
@@ -335,7 +335,7 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
+        <action_type display_value="Automated Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
         <action_type_parent/>
         <comment>Delegate OneDrive access to manager</comment>
         <display_text/>
@@ -346,10 +346,10 @@
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-08-10 18:45:52</sys_created_on>
         <sys_id>560dc2e41b55191062e50ed2cd4bcbc3</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-07-10 05:03:40</sys_updated_on>
+        <sys_updated_on>2023-10-04 19:20:06</sys_updated_on>
         <ui_id>f223c61b-e8f0-48f0-9f55-62e90686b683</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=560dc2e41b55191062e50ed2cd4bcbc3"/>
@@ -395,7 +395,7 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="AD Account Term/Disable">d546f2011bea091462e50ed2cd4bcb79</action_type>
+        <action_type display_value="Automated AD Termination">d546f2011bea091462e50ed2cd4bcb79</action_type>
         <action_type_parent/>
         <comment>Terminate AD account via Azure integration</comment>
         <display_text/>
@@ -406,10 +406,10 @@
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-08-10 20:05:26</sys_created_on>
         <sys_id>cc4fd2681b19191062e50ed2cd4bcb10</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-07-10 05:03:40</sys_updated_on>
+        <sys_updated_on>2023-10-04 19:20:06</sys_updated_on>
         <ui_id>34a1272d-97c6-4d3a-8cef-c9d4c6b5014b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cc4fd2681b19191062e50ed2cd4bcb10"/>
@@ -1639,7 +1639,7 @@
         <column_label/>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>false</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -1684,14 +1684,14 @@
         <sys_created_by>John.Schwab</sys_created_by>
         <sys_created_on>2023-04-26 18:16:19</sys_created_on>
         <sys_id>620abf731bda219062e50ed2cd4bcba6</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Automation Success</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_update_name>sys_hub_flow_variable_620abf731bda219062e50ed2cd4bcba6</sys_update_name>
-        <sys_updated_by>John.Schwab</sys_updated_by>
-        <sys_updated_on>2023-04-27 13:49:37</sys_updated_on>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-09-12 18:44:29</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1884,7 +1884,7 @@
         <sys_created_on>2022-08-10 18:39:24</sys_created_on>
         <sys_id>238b4a241b55191062e50ed2cd4bcb6f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Task Record</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -1907,7 +1907,7 @@
         <sys_created_on>2022-08-10 18:39:24</sys_created_on>
         <sys_id>638b4a241b55191062e50ed2cd4bcb79</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Person Leaving Record</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -1930,7 +1930,7 @@
         <sys_created_on>2022-08-10 18:39:24</sys_created_on>
         <sys_id>6b8b4a241b55191062e50ed2cd4bcb8f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Manager Record</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -1948,7 +1948,7 @@
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"43df96e81b19191062e50ed2cd4bcb81","name":"plan","plan_signature":null}}</plan>
         <plan_id display_value="AD and OneDrive Deprovisioning">f84b42e01b55191062e50ed2cd4bcb32</plan_id>
-        <snapshot>79d313731b3b21108c5143f3cc4bcb4c</snapshot>
+        <snapshot>d6909db71be9359062e50ed2cd4bcb9a</snapshot>
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-08-10 20:08:06</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -2272,8 +2272,8 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="AD Account Term/Disable">d546f2011bea091462e50ed2cd4bcb79</action_type>
-        <action_type_parent display_value="AD Account Term/Disable">f516f2cd1baa091462e50ed2cd4bcb1c</action_type_parent>
+        <action_type display_value="Automated AD Termination">d546f2011bea091462e50ed2cd4bcb79</action_type>
+        <action_type_parent display_value="Automated AD Termination">f516f2cd1baa091462e50ed2cd4bcb1c</action_type_parent>
         <comment>Terminate AD account via Azure integration</comment>
         <display_text/>
         <flow display_value="AD and OneDrive Deprovisioning">b1df16e81b19191062e50ed2cd4bcb33</flow>
@@ -2406,8 +2406,8 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
-        <action_type_parent display_value="Delegate OneDrive Access">86eeeb491baf81508c5143f3cc4bcb17</action_type_parent>
+        <action_type display_value="Automated Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
+        <action_type_parent display_value="Automated Delegate OneDrive Access">86eeeb491baf81508c5143f3cc4bcb17</action_type_parent>
         <comment>Delegate OneDrive access to manager</comment>
         <display_text/>
         <flow display_value="AD and OneDrive Deprovisioning">b1df16e81b19191062e50ed2cd4bcb33</flow>
@@ -3843,7 +3843,7 @@
         <sys_created_on>2022-08-10 20:08:01</sys_created_on>
         <sys_id>31df16e81b19191062e50ed2cd4bcb90</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Task Record</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -3866,7 +3866,7 @@
         <sys_created_on>2022-08-10 20:08:01</sys_created_on>
         <sys_id>75df16e81b19191062e50ed2cd4bcba0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Person Leaving Record</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -3889,7 +3889,7 @@
         <sys_created_on>2022-08-10 20:08:01</sys_created_on>
         <sys_id>bddf16e81b19191062e50ed2cd4bcbb0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Manager Record</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -3905,6 +3905,6 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>f84b42e01b55191062e50ed2cd4bcb32</sys_id>
         <latest_snapshot>b1df16e81b19191062e50ed2cd4bcb33</latest_snapshot>
-        <compiler_build>glide-tokyo-07-08-2022__patch9-hotfix2-06-07-2023_06-23-2023_1740.zip</compiler_build>
+        <compiler_build>glide-tokyo-07-08-2022__patch9-hotfix2b-07-19-2023_08-01-2023_1829.zip</compiler_build>
     </sys_hub_flow>
 </record_update>

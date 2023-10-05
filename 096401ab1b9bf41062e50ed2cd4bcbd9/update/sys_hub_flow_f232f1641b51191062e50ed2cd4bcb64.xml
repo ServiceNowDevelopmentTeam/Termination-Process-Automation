@@ -37,7 +37,7 @@
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_update_name>sys_hub_flow_f232f1641b51191062e50ed2cd4bcb64</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-09-29 16:48:28</sys_updated_on>
+        <sys_updated_on>2022-10-31 18:37:19</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=f232f1641b51191062e50ed2cd4bcb64"/>
@@ -419,7 +419,7 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="AD Account Term/Disable">d546f2011bea091462e50ed2cd4bcb79</action_type>
+        <action_type display_value="Automated AD Termination">d546f2011bea091462e50ed2cd4bcb79</action_type>
         <action_type_parent/>
         <comment>Terminate AD account</comment>
         <display_text/>
@@ -579,7 +579,7 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
+        <action_type display_value="Automated Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
         <action_type_parent/>
         <comment/>
         <display_text/>
@@ -1749,8 +1749,8 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="AD Account Term/Disable">d546f2011bea091462e50ed2cd4bcb79</action_type>
-        <action_type_parent display_value="AD Account Term/Disable">f516f2cd1baa091462e50ed2cd4bcb1c</action_type_parent>
+        <action_type display_value="Automated AD Termination">d546f2011bea091462e50ed2cd4bcb79</action_type>
+        <action_type_parent display_value="Automated AD Termination">f516f2cd1baa091462e50ed2cd4bcb1c</action_type_parent>
         <comment>Terminate AD account</comment>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f43886a81b15191062e50ed2cd4bcb24</flow>
@@ -2037,8 +2037,8 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
-        <action_type_parent display_value="Delegate OneDrive Access">86eeeb491baf81508c5143f3cc4bcb17</action_type_parent>
+        <action_type display_value="Automated Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
+        <action_type_parent display_value="Automated Delegate OneDrive Access">86eeeb491baf81508c5143f3cc4bcb17</action_type_parent>
         <comment/>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f43886a81b15191062e50ed2cd4bcb24</flow>

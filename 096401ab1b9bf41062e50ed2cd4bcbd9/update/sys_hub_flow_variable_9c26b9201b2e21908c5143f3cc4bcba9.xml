@@ -38,7 +38,7 @@
         <label>Manager</label>
         <mandatory>false</mandatory>
         <max_length>32</max_length>
-        <model display_value="Azure - OneDrive Delegation Return Data">0426b9201b2e21908c5143f3cc4bcb6a</model>
+        <model display_value="">0426b9201b2e21908c5143f3cc4bcb6a</model>
         <model_id>0426b9201b2e21908c5143f3cc4bcb6a</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
         <name>var__m_sys_hub_flow_variable_0426b9201b2e21908c5143f3cc4bcb6a</name>

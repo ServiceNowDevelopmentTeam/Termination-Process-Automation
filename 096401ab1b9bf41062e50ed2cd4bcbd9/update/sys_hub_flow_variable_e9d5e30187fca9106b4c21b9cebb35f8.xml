@@ -2,7 +2,7 @@
     <sys_hub_flow_variable action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=2bcb66ec-706d-4067-99dc-c5fd67f4d926</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ac72dd5a-66eb-4f0b-b61d-1c1e8cfdba4c</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -26,7 +26,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>url</element>
+        <element>person_leaving_upn</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
@@ -35,13 +35,13 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>URL</label>
+        <label>Person Leaving UPN</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="">9a9575ac1bea21908c5143f3cc4bcb23</model>
-        <model_id>9a9575ac1bea21908c5143f3cc4bcb23</model_id>
+        <model display_value="AD and OneDrive Deprovisioning">e8d52fcd87bca9106b4c21b9cebb352f</model>
+        <model_id>e8d52fcd87bca9106b4c21b9cebb352f</model_id>
         <model_table>sys_hub_flow_snapshot</model_table>
-        <name>var__m_sys_hub_flow_variable_9a9575ac1bea21908c5143f3cc4bcb23</name>
+        <name>var__m_sys_hub_flow_variable_e8d52fcd87bca9106b4c21b9cebb352f</name>
         <next_element/>
         <order>0</order>
         <primary>false</primary>
@@ -58,14 +58,14 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_flow_variable</sys_class_name>
         <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2023-04-28 16:33:07</sys_created_on>
-        <sys_name>URL</sys_name>
+        <sys_created_on>2023-02-02 14:10:34</sys_created_on>
+        <sys_name>Person Leaving UPN</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
-        <sys_update_name>sys_hub_flow_variable_529575ac1bea21908c5143f3cc4bcb68</sys_update_name>
+        <sys_update_name>sys_hub_flow_variable_e9d5e30187fca9106b4c21b9cebb35f8</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2023-04-28 16:33:07</sys_updated_on>
+        <sys_updated_on>2023-02-02 14:10:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
