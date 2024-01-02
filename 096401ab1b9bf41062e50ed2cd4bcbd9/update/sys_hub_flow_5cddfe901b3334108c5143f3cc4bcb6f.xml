@@ -4,6 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
@@ -31,7 +32,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5cddfe901b3334108c5143f3cc4bcb6f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Azure - OneDrive Delegation Return Data</sys_name>
         <sys_overrides/>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
@@ -39,7 +40,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
         <sys_update_name>sys_hub_flow_5cddfe901b3334108c5143f3cc4bcb6f</sys_update_name>
         <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2023-11-08 17:57:56</sys_updated_on>
+        <sys_updated_on>2023-12-13 20:49:19</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=5cddfe901b3334108c5143f3cc4bcb6f"/>
@@ -60,6 +61,29 @@ This will return information to the user about their OneDrive Delegation.</descr
     </sys_flow_cat_variable_model>
     <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=94ddb6541b3334108c5143f3cc4bcb11"/>
     <sys_hub_flow_input action="delete_multiple" query="model=5cddfe901b3334108c5143f3cc4bcb6f^sys_idNOT IN6d1083d41b3334108c5143f3cc4bcb49"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDed1083d4ab3334107df88af8a672ac45</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>096401ab1b9bf41062e50ed2cd4bcbd9</scope_name>
+        <serialized_content>{"FlowDesigner:FDed1083d4ab3334107df88af8a672ac45":{"delegation_status":"String","delegation_status.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"delegation_status\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"access_url":"String","access_url.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"access_url\",\"mandatory\":\"true\",\"order\":\"1\",\"max_length\":\"0\"}"},"user_upn":"String","user_upn.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"user_upn\",\"mandatory\":\"true\",\"order\":\"4\",\"max_length\":\"0\"}"},"manager_upn":"String","manager_upn.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"manager_upn\",\"mandatory\":\"true\",\"order\":\"3\",\"max_length\":\"0\"}"}},"FlowDesigner:FDed1083d4ab3334107df88af8a672ac45.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDed1083d4ab3334107df88af8a672ac45\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"flowData\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"65000\",\"uiUniqueId\":\"a91a8a36-c6d3-4e85-8c15-76d697badaf4\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2021-11-09 18:05:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e11083d41b3334108c5143f3cc4bcb46</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_name>FDed1083d4ab3334107df88af8a672ac45</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_complex_object_e11083d41b3334108c5143f3cc4bcb46</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-11-08 17:57:54</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -143,6 +167,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6d1083d41b3334108c5143f3cc4bcb49"/>
     <sys_hub_flow_output action="delete_multiple" query="model=5cddfe901b3334108c5143f3cc4bcb6f"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=5cddfe901b3334108c5143f3cc4bcb6f"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=5cddfe901b3334108c5143f3cc4bcb6f^sys_idNOT IN41bcc54f1b96f91062e50ed2cd4bcb9f,5229eb641bb7b41062e50ed2cd4bcbd5,65608fd41b3334108c5143f3cc4bcbb0,85bcc54f1b96f91062e50ed2cd4bcb6d,a567afa01bb7b41062e50ed2cd4bcbbc,e967afa01bb7b41062e50ed2cd4bcba8"/>
@@ -151,6 +176,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look up latest RITM by variable value">6713f6d61b9a7110c16ddb9ebd4bcb38</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment>Look up latest ritm for person leaving</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -239,6 +265,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -301,6 +328,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment>Look up ritm again</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -363,6 +391,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment>Look up person leaving</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -451,6 +480,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment>Comment delegation</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -539,6 +569,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -624,6 +655,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=e967afa01bb7b41062e50ed2cd4bcba8"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=5cddfe901b3334108c5143f3cc4bcb6f^sys_idNOT IN2daeb8281b50e11462e50ed2cd4bcbcb,4961f5641bea21908c5143f3cc4bcb6a,ad67afa01bb7b41062e50ed2cd4bcbbe,baf2b5281bea21908c5143f3cc4bcb3e,c842fda41bea21908c5143f3cc4bcb56,d1dfd8411b2795d08c5143f3cc4bcb8a"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -758,6 +790,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     </sys_hub_sub_flow_instance_inputs>
     <sys_hub_input_scripts action="delete_multiple" query="instance=2daeb8281b50e11462e50ed2cd4bcbcb"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -1071,6 +1104,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2023-04-28 16:23:16</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -1420,6 +1454,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2021-11-10 15:37:27</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -1733,6 +1768,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2023-04-28 16:23:17</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -2046,6 +2082,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2023-04-28 16:23:16</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</flow>
@@ -2399,6 +2436,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     </sys_hub_input_scripts>
     <sys_hub_flow_logic action="delete_multiple" query="flow=5cddfe901b3334108c5143f3cc4bcb6f^sys_idNOT IN0042fda41bea21908c5143f3cc4bcb4f,05c0b5241bea21908c5143f3cc4bcb5a,32f2b5281bea21908c5143f3cc4bcb37,49c0b5241bea21908c5143f3cc4bcb56,51c0b5241bea21908c5143f3cc4bcb7b,8c07ed301b7751508c5143f3cc4bcbe9,a6f2b5281bea21908c5143f3cc4bcb33,af2cdc891be395d08c5143f3cc4bcb83,b732fda41bea21908c5143f3cc4bcb4b,d5c0b5241bea21908c5143f3cc4bcb77,fae4f5331ba885d08c5143f3cc4bcbee"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">e41862821b1fa5908db03375cc4bcbc1</block>
         <comment>Wait 30 days</comment>
         <connected_to/>
@@ -2461,6 +2499,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0042fda41bea21908c5143f3cc4bcb4f"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0042fda41bea21908c5143f3cc4bcb4f"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">101862821b1fa5908db03375cc4bcb40</block>
         <comment/>
         <connected_to/>
@@ -2494,6 +2533,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=05c0b5241bea21908c5143f3cc4bcb5a"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=05c0b5241bea21908c5143f3cc4bcb5a"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">381862821b1fa5908db03375cc4bcbf0</block>
         <comment>Wait 89 days</comment>
         <connected_to/>
@@ -2556,6 +2596,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=32f2b5281bea21908c5143f3cc4bcb37"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=32f2b5281bea21908c5143f3cc4bcb37"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">dc1862821b1fa5908db03375cc4bcb3a</block>
         <comment/>
         <connected_to/>
@@ -2589,6 +2630,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=49c0b5241bea21908c5143f3cc4bcb56"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=49c0b5241bea21908c5143f3cc4bcb56"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">a41862821b1fa5908db03375cc4bcb92</block>
         <comment>Wait 60 days</comment>
         <connected_to/>
@@ -2651,6 +2693,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=51c0b5241bea21908c5143f3cc4bcb7b"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=51c0b5241bea21908c5143f3cc4bcb7b"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">101862821b1fa5908db03375cc4bcb27</block>
         <comment>Set manager and URL</comment>
         <connected_to/>
@@ -2709,6 +2752,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8c07ed301b7751508c5143f3cc4bcbe9"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=8c07ed301b7751508c5143f3cc4bcbe9"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">bc1862821b1fa5908db03375cc4bcbe5</block>
         <comment/>
         <connected_to/>
@@ -2742,6 +2786,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=a6f2b5281bea21908c5143f3cc4bcb33"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=a6f2b5281bea21908c5143f3cc4bcb33"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">581862821b1fa5908db03375cc4bcb4a</block>
         <comment>Wait 83 days</comment>
         <connected_to/>
@@ -2881,6 +2926,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=af2cdc891be395d08c5143f3cc4bcb83"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=af2cdc891be395d08c5143f3cc4bcb83"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">6c1862821b1fa5908db03375cc4bcbb6</block>
         <comment/>
         <connected_to/>
@@ -2914,6 +2960,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=b732fda41bea21908c5143f3cc4bcb4b"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=b732fda41bea21908c5143f3cc4bcb4b"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">641862821b1fa5908db03375cc4bcb7b</block>
         <comment/>
         <connected_to/>
@@ -2947,6 +2994,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d5c0b5241bea21908c5143f3cc4bcb77"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=d5c0b5241bea21908c5143f3cc4bcb77"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">4c1822821b1fa5908db03375cc4bcbf0</block>
         <comment/>
         <connected_to/>
@@ -3294,7 +3342,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_created_on>2021-11-09 18:05:06</sys_created_on>
         <sys_id>29104bd41b3334108c5143f3cc4bcb5b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>flowData</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -3307,28 +3355,12 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5cddfe901b3334108c5143f3cc4bcb6f"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_5cddfe901b3334108c5143f3cc4bcb6f"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5cddfe901b3334108c5143f3cc4bcb6f"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=5cddfe901b3334108c5143f3cc4bcb6f"/>
-    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=5cddfe901b3334108c5143f3cc4bcb6f^sys_idNOT IN4260cfd41b3334108c5143f3cc4bcb34"/>
-    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"4260cfd41b3334108c5143f3cc4bcb34","name":"plan","plan_signature":null}}</plan>
-        <plan_id display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</plan_id>
-        <snapshot>46b051cf1bd6f91062e50ed2cd4bcbdf</snapshot>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2021-11-09 18:06:29</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
-        <sys_id>4260cfd41b3334108c5143f3cc4bcb34</sys_id>
-        <sys_mod_count>30</sys_mod_count>
-        <sys_overrides/>
-        <sys_scope/>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2023-11-08 17:57:54</sys_updated_on>
-    </sys_flow_subflow_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
@@ -3383,6 +3415,29 @@ This will return information to the user about their OneDrive Delegation.</descr
     </sys_flow_cat_variable_model>
     <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=b5608fd41b3334108c5143f3cc4bcbd4"/>
     <sys_hub_flow_input action="delete_multiple" query="model=b1608fd41b3334108c5143f3cc4bcbd3^sys_idNOT IN3d608fd41b3334108c5143f3cc4bcbd7"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDf5608fd41633341048e95f0baa5322d5</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>096401ab1b9bf41062e50ed2cd4bcbd9</scope_name>
+        <serialized_content>{"FlowDesigner:FDf5608fd41633341048e95f0baa5322d5":{"delegation_status":"String","delegation_status.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"delegation_status\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"access_url":"String","access_url.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"access_url\",\"mandatory\":\"true\",\"order\":\"1\",\"max_length\":\"0\"}"},"user_upn":"String","user_upn.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"user_upn\",\"mandatory\":\"true\",\"order\":\"4\",\"max_length\":\"0\"}"},"manager_upn":"String","manager_upn.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"manager_upn\",\"mandatory\":\"true\",\"order\":\"3\",\"max_length\":\"0\"}"}},"FlowDesigner:FDf5608fd41633341048e95f0baa5322d5.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDf5608fd41633341048e95f0baa5322d5\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"flowData\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"65000\",\"uiUniqueId\":\"a91a8a36-c6d3-4e85-8c15-76d697badaf4\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2021-11-09 18:06:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b9608fd41b3334108c5143f3cc4bcbd5</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>FDf5608fd41633341048e95f0baa5322d5</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_complex_object_b9608fd41b3334108c5143f3cc4bcbd5</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-11-08 17:57:46</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -3466,6 +3521,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3d608fd41b3334108c5143f3cc4bcbd7"/>
     <sys_hub_flow_output action="delete_multiple" query="model=b1608fd41b3334108c5143f3cc4bcbd3"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=b1608fd41b3334108c5143f3cc4bcbd3"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=b1608fd41b3334108c5143f3cc4bcbd3^sys_idNOT IN616d09431bd6f91062e50ed2cd4bcb84,83296f641bb7b41062e50ed2cd4bcb0f,956d09431bd6f91062e50ed2cd4bcb5c,b960cfd41b3334108c5143f3cc4bcb19,c3296f641bb7b41062e50ed2cd4bcb21,c7296f641bb7b41062e50ed2cd4bcb17"/>
@@ -3474,6 +3530,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look up latest RITM by variable value">6713f6d61b9a7110c16ddb9ebd4bcb38</action_type>
         <action_type_parent display_value="Look up latest RITM by variable value">9c9d6e9e1b5a7110c16ddb9ebd4bcbad</action_type_parent>
+        <attributes/>
         <comment>Look up latest ritm for person leaving</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -3562,6 +3619,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
         <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -3650,6 +3708,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
         <comment>Look up person leaving</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -3738,6 +3797,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
         <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
         <comment>Look up ritm again</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -3800,6 +3860,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
         <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -3862,6 +3923,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
         <comment>Comment delegation</comment>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -3947,6 +4009,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=c7296f641bb7b41062e50ed2cd4bcb17"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=b1608fd41b3334108c5143f3cc4bcbd3^sys_idNOT IN106339681bea21908c5143f3cc4bcb30,1fae7c281b50e11462e50ed2cd4bcb41,6c70ec811b2795d08c5143f3cc4bcb7d,946339681bea21908c5143f3cc4bcb52,c7296f641bb7b41062e50ed2cd4bcb23,d86339681bea21908c5143f3cc4bcb41"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -4260,6 +4323,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2023-04-28 16:23:25</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -4394,6 +4458,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     </sys_hub_sub_flow_instance_inputs>
     <sys_hub_input_scripts action="delete_multiple" query="instance=1fae7c281b50e11462e50ed2cd4bcb41"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -4718,6 +4783,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2023-04-28 16:23:25</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -5031,6 +5097,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2023-04-28 16:23:26</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -5380,6 +5447,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_updated_on>2021-11-10 15:43:05</sys_updated_on>
     </sys_hub_input_scripts>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Azure - OneDrive Delegation Return Data">b1608fd41b3334108c5143f3cc4bcbd3</flow>
@@ -5694,6 +5762,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     </sys_hub_input_scripts>
     <sys_hub_flow_logic action="delete_multiple" query="flow=b1608fd41b3334108c5143f3cc4bcbd3^sys_idNOT IN0063f5681bea21908c5143f3cc4bcbe2,2470ec811b2795d08c5143f3cc4bcb6a,8063f5681bea21908c5143f3cc4bcbf9,8463f5681bea21908c5143f3cc4bcbf6,946339681bea21908c5143f3cc4bcb03,986339681bea21908c5143f3cc4bcb00,ad07a1701b7751508c5143f3cc4bcb53,cc63f5681bea21908c5143f3cc4bcbe4,d86339681bea21908c5143f3cc4bcb0c,dc6339681bea21908c5143f3cc4bcb09,fbe479331ba885d08c5143f3cc4bcb78"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">dc1862821b1fa5908db03375cc4bcb3a</block>
         <comment/>
         <connected_to/>
@@ -5727,6 +5796,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0063f5681bea21908c5143f3cc4bcbe2"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0063f5681bea21908c5143f3cc4bcbe2"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">581862821b1fa5908db03375cc4bcb4a</block>
         <comment>Wait 83 days</comment>
         <connected_to/>
@@ -5866,6 +5936,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=2470ec811b2795d08c5143f3cc4bcb6a"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=2470ec811b2795d08c5143f3cc4bcb6a"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">a41862821b1fa5908db03375cc4bcb92</block>
         <comment>Wait 60 days</comment>
         <connected_to/>
@@ -5928,6 +5999,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8063f5681bea21908c5143f3cc4bcbf9"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=8063f5681bea21908c5143f3cc4bcbf9"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">641862821b1fa5908db03375cc4bcb7b</block>
         <comment/>
         <connected_to/>
@@ -5961,6 +6033,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8463f5681bea21908c5143f3cc4bcbf6"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=8463f5681bea21908c5143f3cc4bcbf6"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">e41862821b1fa5908db03375cc4bcbc1</block>
         <comment>Wait 30 days</comment>
         <connected_to/>
@@ -6023,6 +6096,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=946339681bea21908c5143f3cc4bcb03"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=946339681bea21908c5143f3cc4bcb03"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">6c1862821b1fa5908db03375cc4bcbb6</block>
         <comment/>
         <connected_to/>
@@ -6056,6 +6130,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=986339681bea21908c5143f3cc4bcb00"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=986339681bea21908c5143f3cc4bcb00"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">101862821b1fa5908db03375cc4bcb27</block>
         <comment>Set manager and URL</comment>
         <connected_to/>
@@ -6114,6 +6189,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ad07a1701b7751508c5143f3cc4bcb53"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=ad07a1701b7751508c5143f3cc4bcb53"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">101862821b1fa5908db03375cc4bcb40</block>
         <comment/>
         <connected_to/>
@@ -6147,6 +6223,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=cc63f5681bea21908c5143f3cc4bcbe4"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=cc63f5681bea21908c5143f3cc4bcbe4"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">381862821b1fa5908db03375cc4bcbf0</block>
         <comment>Wait 89 days</comment>
         <connected_to/>
@@ -6209,6 +6286,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d86339681bea21908c5143f3cc4bcb0c"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=d86339681bea21908c5143f3cc4bcb0c"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">bc1862821b1fa5908db03375cc4bcbe5</block>
         <comment/>
         <connected_to/>
@@ -6242,6 +6320,7 @@ This will return information to the user about their OneDrive Delegation.</descr
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=dc6339681bea21908c5143f3cc4bcb09"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=dc6339681bea21908c5143f3cc4bcb09"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">4c1822821b1fa5908db03375cc4bcbf0</block>
         <comment/>
         <connected_to/>
@@ -6589,7 +6668,7 @@ This will return information to the user about their OneDrive Delegation.</descr
         <sys_created_on>2021-11-09 18:06:28</sys_created_on>
         <sys_id>3160cfd41b3334108c5143f3cc4bcb0b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>flowData</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
@@ -6607,4 +6686,21 @@ This will return information to the user about their OneDrive Delegation.</descr
         <latest_snapshot>b1608fd41b3334108c5143f3cc4bcbd3</latest_snapshot>
         <compiler_build>glide-tokyo-07-08-2022__patch10-hotfix1a-09-18-2023_10-06-2023_1603.zip</compiler_build>
     </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=5cddfe901b3334108c5143f3cc4bcb6f"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=5cddfe901b3334108c5143f3cc4bcb6f^sys_idNOT IN4260cfd41b3334108c5143f3cc4bcb34"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"4260cfd41b3334108c5143f3cc4bcb34","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Azure - OneDrive Delegation Return Data">5cddfe901b3334108c5143f3cc4bcb6f</plan_id>
+        <snapshot>46b051cf1bd6f91062e50ed2cd4bcbdf</snapshot>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2021-11-09 18:06:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4260cfd41b3334108c5143f3cc4bcb34</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-11-08 17:57:54</sys_updated_on>
+    </sys_flow_subflow_plan>
 </record_update>

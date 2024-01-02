@@ -4,6 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
@@ -141,6 +142,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6b44f9a81b51191062e50ed2cd4bcbbb"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -224,6 +226,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=88c2b9641b51191062e50ed2cd4bcbfb"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -307,6 +310,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a744f9a81b51191062e50ed2cd4bcbec"/>
     <sys_hub_flow_output action="delete_multiple" query="model=f232f1641b51191062e50ed2cd4bcb64"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=f232f1641b51191062e50ed2cd4bcb64"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=f232f1641b51191062e50ed2cd4bcb64^sys_idNOT IN0d434e2c1bd1191062e50ed2cd4bcbff,2e970ee41b15191062e50ed2cd4bcba8,6f078a641b15191062e50ed2cd4bcb55,b205fd2c1b51191062e50ed2cd4bcb0e,e6970ee41b15191062e50ed2cd4bcb9e"/>
@@ -315,6 +319,7 @@
         <action_inputs/>
         <action_type display_value="Build HTML Card">92ccc28b1b5dc9508c5143f3cc4bcb94</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment>Build azure response work note</comment>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f232f1641b51191062e50ed2cd4bcb64</flow>
@@ -419,8 +424,9 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Automated AD Termination">d546f2011bea091462e50ed2cd4bcb79</action_type>
+        <action_type display_value="AD Account Term/Disable">d546f2011bea091462e50ed2cd4bcb79</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment>Terminate AD account</comment>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f232f1641b51191062e50ed2cd4bcb64</flow>
@@ -533,6 +539,7 @@
         <action_inputs/>
         <action_type display_value="Add Worknote">4d7227a473210300e4fd234ffff6a712</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment>Add response work note to RITM</comment>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f232f1641b51191062e50ed2cd4bcb64</flow>
@@ -579,8 +586,9 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Automated Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
+        <action_type display_value="Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f232f1641b51191062e50ed2cd4bcb64</flow>
@@ -640,6 +648,7 @@
         <action_inputs/>
         <action_type display_value="Is Environment Sub-Production?">b8c6123d1bef895062e50ed2cd4bcb3a</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f232f1641b51191062e50ed2cd4bcb64</flow>
@@ -661,6 +670,7 @@
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=f232f1641b51191062e50ed2cd4bcb64"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=f232f1641b51191062e50ed2cd4bcb64^sys_idNOT IN22970ee41b15191062e50ed2cd4bcb97,33e3f9681b51191062e50ed2cd4bcb0a,3be3b9681b51191062e50ed2cd4bcbf3,5d9371681b51191062e50ed2cd4bcb13,7be3f9681b51191062e50ed2cd4bcb06,7c434e2c1bd1191062e50ed2cd4bcbf2,b4434e2c1bd1191062e50ed2cd4bcbf5,b7e3b9681b51191062e50ed2cd4bcbf7,f205bd2c1b51191062e50ed2cd4bcbe4"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">6e970ee41b15191062e50ed2cd4bcb96</block>
         <comment/>
         <connected_to/>
@@ -694,6 +704,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=22970ee41b15191062e50ed2cd4bcb97"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=22970ee41b15191062e50ed2cd4bcb97"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">7fe3f9681b51191062e50ed2cd4bcb09</block>
         <comment>Set person leaving UPN to person leaving email</comment>
         <connected_to/>
@@ -740,6 +751,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=33e3f9681b51191062e50ed2cd4bcb0a"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=33e3f9681b51191062e50ed2cd4bcb0a"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">77e3b9681b51191062e50ed2cd4bcbf3</block>
         <comment/>
         <connected_to/>
@@ -813,6 +825,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=3be3b9681b51191062e50ed2cd4bcbf3"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=3be3b9681b51191062e50ed2cd4bcbf3"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">959371681b51191062e50ed2cd4bcb13</block>
         <comment>Default Manager and Person Leaving UPN</comment>
         <connected_to/>
@@ -871,6 +884,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5d9371681b51191062e50ed2cd4bcb13"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=5d9371681b51191062e50ed2cd4bcb13"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">b7e3f9681b51191062e50ed2cd4bcb06</block>
         <comment/>
         <connected_to/>
@@ -944,6 +958,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=7be3f9681b51191062e50ed2cd4bcb06"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=7be3f9681b51191062e50ed2cd4bcb06"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">b4434e2c1bd1191062e50ed2cd4bcbf2</block>
         <comment/>
         <connected_to/>
@@ -977,6 +992,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=7c434e2c1bd1191062e50ed2cd4bcbf2"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=7c434e2c1bd1191062e50ed2cd4bcbf2"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">f0434e2c1bd1191062e50ed2cd4bcbf5</block>
         <comment/>
         <connected_to/>
@@ -1010,6 +1026,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=b4434e2c1bd1191062e50ed2cd4bcbf5"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=b4434e2c1bd1191062e50ed2cd4bcbf5"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">f3e3b9681b51191062e50ed2cd4bcbf7</block>
         <comment>Set manager UPN to manager email</comment>
         <connected_to/>
@@ -1056,6 +1073,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=b7e3b9681b51191062e50ed2cd4bcbf7"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=b7e3b9681b51191062e50ed2cd4bcbf7"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">3a05bd2c1b51191062e50ed2cd4bcbe3</block>
         <comment/>
         <connected_to/>
@@ -1420,28 +1438,12 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f232f1641b51191062e50ed2cd4bcb64"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_f232f1641b51191062e50ed2cd4bcb64"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f232f1641b51191062e50ed2cd4bcb64"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=f232f1641b51191062e50ed2cd4bcb64"/>
-    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=f232f1641b51191062e50ed2cd4bcb64^sys_idNOT IN0a380aa81b15191062e50ed2cd4bcbfd"/>
-    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
-        <plan>com.snc.process_flow.engine.ProcessPlan@1a19504</plan>
-        <plan_id display_value="Deprovision AD and OneDrive">f232f1641b51191062e50ed2cd4bcb64</plan_id>
-        <snapshot>f43886a81b15191062e50ed2cd4bcb24</snapshot>
-        <sys_created_by>Terry.Lillo</sys_created_by>
-        <sys_created_on>2022-08-10 18:24:49</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
-        <sys_id>0a380aa81b15191062e50ed2cd4bcbfd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_overrides/>
-        <sys_scope/>
-        <sys_updated_by>Terry.Lillo</sys_updated_by>
-        <sys_updated_on>2022-08-10 18:24:49</sys_updated_on>
-    </sys_flow_subflow_plan>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from/>
@@ -1577,6 +1579,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=013886a81b15191062e50ed2cd4bcbca"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1660,6 +1663,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3c3886a81b15191062e50ed2cd4bcb26"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1743,14 +1747,16 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c93886a81b15191062e50ed2cd4bcbb9"/>
     <sys_hub_flow_output action="delete_multiple" query="model=f43886a81b15191062e50ed2cd4bcb24"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=f43886a81b15191062e50ed2cd4bcb24"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=f43886a81b15191062e50ed2cd4bcb24^sys_idNOT IN1538c6a81b15191062e50ed2cd4bcbcd,5538c6a81b15191062e50ed2cd4bcbad,9538c6a81b15191062e50ed2cd4bcbb5,d538c6a81b15191062e50ed2cd4bcb98,dd38c6a81b15191062e50ed2cd4bcb81"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Automated AD Termination">d546f2011bea091462e50ed2cd4bcb79</action_type>
-        <action_type_parent display_value="Automated AD Termination">f516f2cd1baa091462e50ed2cd4bcb1c</action_type_parent>
+        <action_type display_value="AD Account Term/Disable">d546f2011bea091462e50ed2cd4bcb79</action_type>
+        <action_type_parent display_value="AD Account Term/Disable">f516f2cd1baa091462e50ed2cd4bcb1c</action_type_parent>
+        <attributes/>
         <comment>Terminate AD account</comment>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f43886a81b15191062e50ed2cd4bcb24</flow>
@@ -1863,6 +1869,7 @@
         <action_inputs/>
         <action_type display_value="Add Worknote">4d7227a473210300e4fd234ffff6a712</action_type>
         <action_type_parent display_value="Add Worknote">cdc8896487110300123eaf8e36cb0b24</action_type_parent>
+        <attributes/>
         <comment>Add response work note to RITM</comment>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f43886a81b15191062e50ed2cd4bcb24</flow>
@@ -1910,6 +1917,7 @@
         <action_inputs/>
         <action_type display_value="Is Environment Sub-Production?">b8c6123d1bef895062e50ed2cd4bcb3a</action_type>
         <action_type_parent display_value="Is Environment Sub-Production?">c1565a391bef895062e50ed2cd4bcb69</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f43886a81b15191062e50ed2cd4bcb24</flow>
@@ -1933,6 +1941,7 @@
         <action_inputs/>
         <action_type display_value="Build HTML Card">92ccc28b1b5dc9508c5143f3cc4bcb94</action_type>
         <action_type_parent display_value="Build HTML Card">72244e4b1b1dc9508c5143f3cc4bcb72</action_type_parent>
+        <attributes/>
         <comment>Build azure response work note</comment>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f43886a81b15191062e50ed2cd4bcb24</flow>
@@ -2037,8 +2046,9 @@
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
         <action_inputs/>
-        <action_type display_value="Automated Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
-        <action_type_parent display_value="Automated Delegate OneDrive Access">86eeeb491baf81508c5143f3cc4bcb17</action_type_parent>
+        <action_type display_value="Delegate OneDrive Access">b7b17f411bef81508c5143f3cc4bcbff</action_type>
+        <action_type_parent display_value="Delegate OneDrive Access">86eeeb491baf81508c5143f3cc4bcb17</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="Deprovision AD and OneDrive">f43886a81b15191062e50ed2cd4bcb24</flow>
@@ -2097,6 +2107,7 @@
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=f43886a81b15191062e50ed2cd4bcb24"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=f43886a81b15191062e50ed2cd4bcb24^sys_idNOT IN0138c6a81b15191062e50ed2cd4bcb20,0538c6a81b15191062e50ed2cd4bcb36,0d38c6a81b15191062e50ed2cd4bcb14,0d38c6a81b15191062e50ed2cd4bcb32,1138c6a81b15191062e50ed2cd4bcb39,4138c6a81b15191062e50ed2cd4bcb19,5138c6a81b15191062e50ed2cd4bcb61,c138c6a81b15191062e50ed2cd4bcb1d,cd38c6a81b15191062e50ed2cd4bcb2f"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">b7e3f9681b51191062e50ed2cd4bcb06</block>
         <comment/>
         <connected_to/>
@@ -2170,6 +2181,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0138c6a81b15191062e50ed2cd4bcb20"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0138c6a81b15191062e50ed2cd4bcb20"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">b4434e2c1bd1191062e50ed2cd4bcbf2</block>
         <comment/>
         <connected_to/>
@@ -2203,6 +2215,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0538c6a81b15191062e50ed2cd4bcb36"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0538c6a81b15191062e50ed2cd4bcb36"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">959371681b51191062e50ed2cd4bcb13</block>
         <comment>Default Manager and Person Leaving UPN</comment>
         <connected_to/>
@@ -2261,6 +2274,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0d38c6a81b15191062e50ed2cd4bcb14"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0d38c6a81b15191062e50ed2cd4bcb14"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">3a05bd2c1b51191062e50ed2cd4bcbe3</block>
         <comment/>
         <connected_to/>
@@ -2334,6 +2348,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0d38c6a81b15191062e50ed2cd4bcb32"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=0d38c6a81b15191062e50ed2cd4bcb32"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">f0434e2c1bd1191062e50ed2cd4bcbf5</block>
         <comment/>
         <connected_to/>
@@ -2367,6 +2382,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1138c6a81b15191062e50ed2cd4bcb39"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=1138c6a81b15191062e50ed2cd4bcb39"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">77e3b9681b51191062e50ed2cd4bcbf3</block>
         <comment/>
         <connected_to/>
@@ -2440,6 +2456,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4138c6a81b15191062e50ed2cd4bcb19"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=4138c6a81b15191062e50ed2cd4bcb19"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">6e970ee41b15191062e50ed2cd4bcb96</block>
         <comment/>
         <connected_to/>
@@ -2473,6 +2490,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5138c6a81b15191062e50ed2cd4bcb61"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=5138c6a81b15191062e50ed2cd4bcb61"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">f3e3b9681b51191062e50ed2cd4bcbf7</block>
         <comment>Set manager UPN to manager email</comment>
         <connected_to/>
@@ -2519,6 +2537,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c138c6a81b15191062e50ed2cd4bcb1d"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=c138c6a81b15191062e50ed2cd4bcb1d"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">7fe3f9681b51191062e50ed2cd4bcb09</block>
         <comment>Set person leaving UPN to person leaving email</comment>
         <connected_to/>
@@ -2861,4 +2880,21 @@
         <latest_snapshot>f43886a81b15191062e50ed2cd4bcb24</latest_snapshot>
         <compiler_build/>
     </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=f232f1641b51191062e50ed2cd4bcb64"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=f232f1641b51191062e50ed2cd4bcb64^sys_idNOT IN0a380aa81b15191062e50ed2cd4bcbfd"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@1a19504</plan>
+        <plan_id display_value="Deprovision AD and OneDrive">f232f1641b51191062e50ed2cd4bcb64</plan_id>
+        <snapshot>f43886a81b15191062e50ed2cd4bcb24</snapshot>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2022-08-10 18:24:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a380aa81b15191062e50ed2cd4bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2022-08-10 18:24:49</sys_updated_on>
+    </sys_flow_subflow_plan>
 </record_update>

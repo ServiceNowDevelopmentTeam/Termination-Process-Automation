@@ -59,6 +59,7 @@
         <sys_class_name>sys_hub_flow_variable</sys_class_name>
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2023-01-06 14:14:12</sys_created_on>
+        <sys_id>63b3a0a81b9ca11462e50ed2cd4bcbd7</sys_id>
         <sys_name>URL</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>

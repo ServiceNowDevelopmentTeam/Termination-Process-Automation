@@ -59,6 +59,7 @@
         <sys_class_name>sys_hub_flow_variable</sys_class_name>
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2022-12-19 15:05:12</sys_created_on>
+        <sys_id>5bc28cb61b779d5062e50ed2cd4bcbe1</sys_id>
         <sys_name>Manager</sys_name>
         <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
         <sys_policy/>
