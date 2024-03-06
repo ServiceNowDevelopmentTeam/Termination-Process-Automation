@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>get_person_leaving_name</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+var userName = 'your team member';
+var ritmGr = new GlideRecord('sc_req_item');
+ritmGr.get(current.sys_id.toString());
+if (!gs.nil(ritmGr)) {
+        userName = ritmGr.variables.Person_Leaving.name.toString();
+}
+template.print(userName);
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2024-03-06 20:56:03</sys_created_on>
+        <sys_id>b56b2e551b74c61062e50ed2cd4bcb4c</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>get_person_leaving_name</sys_name>
+        <sys_package display_value="Termination Process Automation" source="x_apig_termination">096401ab1b9bf41062e50ed2cd4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Termination Process Automation">096401ab1b9bf41062e50ed2cd4bcbd9</sys_scope>
+        <sys_update_name>sys_script_email_b56b2e551b74c61062e50ed2cd4bcb4c</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2024-03-06 21:05:25</sys_updated_on>
+    </sys_script_email>
+</record_update>
